@@ -7,35 +7,40 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <div class="logo-container">
-            <svg class="logo" width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style="stop-color:#0400ff;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#8c00ff;stop-opacity:1" />
-                </radialGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="5" result="coloredBlur" />
-                  <feMerge>
-                    <feMergeNode in="coloredBlur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <circle cx="100" cy="100" r="80" fill="url(#grad1)" filter="url(#glow)" />
-              <text x="100" y="125" font-family="Arial, sans-serif" font-size="72" fill="white" text-anchor="middle" font-weight="bold">L</text>
-            </svg>
-            <span class="logo-text">Lumina Development</span>
-          </div>
-          <div class="language-switch">
-            <button class="language-button active" onclick="switchLanguage('en')">English</button>
-            <button class="language-button" onclick="switchLanguage('jp')">日本語</button>
-          </div>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        
+        <div class="logo-container">
+            
+          <svg class="logo" width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#0400ff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8c00ff;stop-opacity:1" />
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="100" cy="100" r="80" fill="url(#grad1)" filter="url(#glow)" />
+            <text x="100" y="125" font-family="Arial, sans-serif" font-size="72" fill="white" text-anchor="middle" font-weight="bold">L</text>
+          </svg>
+          <span class="logo-text">Lumina Development</span>
+
+      </div>
+
+      <div class="language-switcher">
+        <button class="language-button active" onclick="switchLanguage('en')">EN</button>
+        <button class="language-button" onclick="switchLanguage('jp')">日本語</button>
+      </div>
+    </div>
+    </div>
+  </header>
 
   <section class="hero" id="home">
     <div class="tech-animation" id="tech-animation"></div>
@@ -297,26 +302,36 @@ tax_file.save_to("/path/to/destination/")
   </footer>
 
   <script>
-    function switchLanguage(lang) {
+     function switchLanguage(lang) {
       const english = document.querySelectorAll('.en');
       const japanese = document.querySelectorAll('.jp');
       const enButton = document.querySelector('.language-button:first-child');
       const jpButton = document.querySelector('.language-button:last-child');
+      
       if (lang === 'en') {
         english.forEach(el => el.style.display = 'block');
         japanese.forEach(el => el.style.display = 'none');
         enButton.classList.add('active');
         jpButton.classList.remove('active');
+        document.documentElement.setAttribute('lang', 'en');
       } else {
         english.forEach(el => el.style.display = 'none');
         japanese.forEach(el => el.style.display = 'block');
         enButton.classList.remove('active');
         jpButton.classList.add('active');
+        document.documentElement.setAttribute('lang', 'jp');
       }
+      
+      localStorage.setItem('preferred-language', lang);
     }
-    // function switchMobile(lang) {
-    //  "スマホ表示にする"
-    // }
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLanguage = localStorage.getItem('preferred-language');
+      if (savedLanguage) {
+        switchLanguage(savedLanguage);
+      }
+      
+      createTechAnimation();
+    });
     function createTechAnimation() {
       const container = document.getElementById('tech-animation');
       const containerWidth = container.offsetWidth;
@@ -347,6 +362,15 @@ tax_file.save_to("/path/to/destination/")
       card.addEventListener('click', function(e) {
         if (e.target.closest('button, a, code')) return;
         const githubUrl = this.dataset.githubUrl;
+        if (githubUrl) {
+          window.open(githubUrl, '_blank');
+        }
+      });
+    });
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('button, a, code')) return;
+        const githubUrl = "this.dataset.githubUrl";
         if (githubUrl) {
           window.open(githubUrl, '_blank');
         }
