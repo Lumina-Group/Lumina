@@ -10,3 +10,5 @@ This is the official website of [Lumina Development](https://lumina-group.github
   - AQE（量子耐性暗号ライブラリ）
   - Encapsule（セキュアメッセンジャー）
   - Alzam（まだ未定です。）
+-**Contacts**-
+[Discord](https://discord.gg/y9TURVfVyb)
