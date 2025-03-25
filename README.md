@@ -1,21 +1,21 @@
 # Lumina Development
 
-## 概要 (Overview)
-[Lumina Development](https://lumina-group.github.io/Lumina/)の公式ウェブサイトです。本サイトは、量子耐性暗号ソリューションを提供する当グループの技術、製品、グループ情報、およびお問い合わせ情報を紹介しています。
+[日本語](/README_JA.md)
 
-This is the official website of [Lumina Development](https://lumina-group.github.io/Lumina/). This site introduces our technology, products, group information, and contact information for our quantum-resistant cryptographic solutions.
+## Overview
+This is the official website for [Lumina Development](https://lumina-group.github.io/Lumina/). Our site introduces our group’s technology, products, team information, and contact details. We provide quantum-resistant encryption solutions.
 
-## 特徴 (Features)
-### 先進的な耐量子技術 (Advanced Quantum-Resistant Technology)
-- **ポスト量子暗号**: 格子ベース、ハッシュベース、多変数ベースのアルゴリズムを実装した暗号ライブラリは、量子コンピュータからの攻撃に耐性があり、今後数十年にわたりデータを安全に保護します。
-- **Pythonファースト開発**: 包括的なドキュメントと例を備えた直感的なPythonライブラリを提供し、あらゆるスキルレベルの開発者が耐量子暗号を実装できるようにします。
-- **エンドツーエンド暗号化**: 当グループのメッセージングソリューションは、エンドツーエンド暗号化を提供し、通信のプライバシーと安全性を確保します。
-- **シームレスな統合**: 従来の暗号関数の代替品を通じて既存のシステムとの連携がスムーズに行え、実装の摩擦を最小限に抑えるように設計されています。
-- **将来性のあるセキュリティ**: 継続的な研究と新たに発見された脆弱性に対処するためのアップデートに支えられた、常に進化するセキュリティソリューションで、新たな量子の脅威に先んじます。
+## Features
+### Advanced Quantum-Resistant Technology
+- **Post-Quantum Cryptography**: Our encryption library implements lattice-based, hash-based, and multivariate-based algorithms that resist attacks from quantum computers, ensuring your data remains secure for decades to come.
+- **Python-First Development**: We offer an intuitive Python library with comprehensive documentation and examples, enabling developers of all skill levels to implement quantum-resistant encryption.
+- **End-to-End Encryption**: Our messaging solution provides end-to-end encryption to guarantee the privacy and security of your communications.
+- **Seamless Integration**: Designed as a drop-in replacement for conventional cryptographic functions, our solutions integrate smoothly with existing systems while minimizing implementation friction.
+- **Future-Proof Security**: Backed by continuous research and regular updates addressing newly discovered vulnerabilities, our ever-evolving security solutions stay ahead of emerging quantum threats.
 
-## 製品情報 (Products)
+## Product Information
 ### AQE
-Python開発者向けの主力量子耐性暗号化ライブラリで、格子ベースの暗号化アルゴリズムの使いやすい実装を提供します。
+AQE is our primary quantum-resistant encryption library for Python developers, offering an easy-to-use implementation of lattice-based encryption algorithms.
 
 ```python
 # just 3 lines to generate quantum-resistant encryption
@@ -26,18 +26,18 @@ encrypted = await transport.encrypt(your_data)
 
 [GitHub Repository](https://github.com/Lumina-Group/AQE)
 
-### Encapsule（近日公開）
-Encapsuleは、匿名で安全にコミュニケーションができるメッセンジャーアプリです。
-- Discordの快適な操作性と、独自の量子耐性を備えた強力な暗号化ライブラリ(AQE)を兼ね備えた、既存のメッセンジャーよりはるかに匿名度の高いメッセージング体験を提供します。
+### Encapsule (Coming Soon)
+Encapsule is an anonymous, secure messenger app designed for safe communication.
+- It provides a messaging experience far more anonymous than existing solutions, combining the smooth usability of Discord with our proprietary quantum-resistant encryption library (AQE).
 
 [GitHub Repository](https://github.com/Lumina-Group/Encapsule)
 
-### Alzam（近日実装）
-セキュアなファイル・ストレージ・ソリューションは、量子力学的攻撃に対する耐性を備えた暗号化機能により、ファイルを保護します。
-- データがデバイスを離れる前に透過的なクライアントサイド暗号化を実施
-- ゼロ知識アーキテクチャ - 当グループは暗号鍵を一切取得しません
-- 細かく設定可能なアクセス制御と権限管理
-- すべてのアクセス試行を記録する詳細な監査ログ
+### Alzam (Implementation Coming Soon)
+Our secure file storage solution protects your files using encryption that withstands quantum attacks.
+- Transparent client-side encryption is applied before data leaves your device.
+- Zero-knowledge architecture – our group never accesses your encryption keys.
+- Granular access controls and permission management.
+- Detailed audit logs that record all access attempts.
 
 ```python
 from alzam import VaultClient
@@ -54,17 +54,17 @@ tax_file.save_to("/path/to/destination/")
 
 [GitHub Repository](https://github.com/Lumina-Group/alzam)
 
-## グループについて (About)
-Lumina Developmentは、量子コンピューティング時代の到来を見据え、誰もが利用しやすい耐量子セキュリティソリューションの開発に取り組むチームによって2025年に設立されました。
+## About the Group
+Lumina Development was established in 2025 by a team dedicated to developing quantum-resistant security solutions that are accessible to everyone in anticipation of the quantum computing era.
 
-現在は創業者1人で開発を進めていますが、より安全な未来を共に築く志を持つエンジニアや研究者を募集しています。
+Currently, the project is led by its sole founder, but we are actively recruiting engineers and researchers who share our vision for a safer future.
 
-多様なバックグラウンドを持つ仲間と協力し、最先端の暗号技術を実用的なセキュリティソリューションへと昇華させていくことを目指しています。
+We aim to collaborate with talented individuals from diverse backgrounds to transform cutting-edge cryptographic technology into practical security solutions.
 
-## お問い合わせ (Contacts)
+## Contact
 - [Discord](https://discord.gg/y9TURVfVyb)
 - [X (Twitter)](https://x.com/Meowkawaii_jp)
 - [Email](mailto:example.example.1.mm@icloud.com)
 
-## ライセンス (License)
-© 2025 Lumina Development. 全著作権所有。
+## License
+© 2025 Lumina Development. All rights reserved.
