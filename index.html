@@ -4,71 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- 主要SEOメタタグ -->
+  <!-- SEO Meta Tags -->
   <title>Lumina Development | Quantum-Resistant Cryptography Solutions</title>
-  <meta name="description" content="Next-generation quantum-resistant cryptography solutions for secure communications and data protection. Open source security libraries for post-quantum era.">
+  <meta name="description" content="Next-generation quantum-resistant cryptography solutions for secure communications and data protection. Building the future of cybersecurity.">
   
-  <!-- 言語指定 -->
+  <!-- Language -->
   <meta http-equiv="Content-Language" content="en,ja">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://Lumina-Group.github.io/">
   
-  <!-- ソーシャルメタタグ（OGP） -->
+  <!-- Social Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lumina Development | 量子耐性暗号技術">
+  <meta property="og:title" content="Lumina Development | Quantum-Resistant Cryptography">
   <meta property="og:site_name" content="Lumina Development">
-  <meta property="og:description" content="量子コンピュータ攻撃に耐える次世代暗号ソリューション">
+  <meta property="og:description" content="Building secure solutions for the post-quantum era">
   <meta property="og:image" content="https://Lumina-Group.github.io/resource/lumina.png">
   <meta property="og:url" content="https://Lumina-Group.github.io/">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:locale:alternate" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lumina Development | Quantum-Resistant Cryptography">
-  <meta name="twitter:description" content="Open source security solutions for post-quantum era">
+  <meta name="twitter:description" content="Building secure solutions for the post-quantum era">
   <meta name="twitter:image" content="https://Lumina-Group.github.io/resource/lumina.png">
-  
-  <!-- 構造化データ（Schema.org） -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Lumina Development",
-    "url": "https://Lumina-Group.github.io/",
-    "logo": "https://Lumina-Group.github.io/resource/lumina.png",
-    "description": "Quantum-resistant cryptography solutions provider",
-    "sameAs": [
-      "https://github.com/Lumina-Group",
-      "https://twitter.com/Meowkawaii_jp"
-    ]
-  }
-  </script>
-
-  <!-- 言語切り替え用hreflang -->
-  <link rel="alternate" hreflang="en" href="https://Lumina-Group.github.io/">
-  <link rel="alternate" hreflang="ja" href="https://Lumina-Group.github.io/">
-  <link rel="alternate" hreflang="x-default" href="https://Lumina-Group.github.io/">
-  
   <link rel="stylesheet" href="css/style.css">
-  <meta name="google-site-verification" content="YmVo1aYC12eemgQuu6uiJN2V2FPYxCSK4IKb_sB-By8" />
+  
 </head>
 <body>
+  <div class="particles" id="particles"></div>
+
   <header>
     <div class="container">
       <div class="header-content">
-        
         <div class="logo-container">
-            
-          <svg class="logo" width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <svg class="logo" width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" style="stop-color:#0400ff;stop-opacity:1" />
                 <stop offset="100%" style="stop-color:#8c00ff;stop-opacity:1" />
               </radialGradient>
               <filter id="glow">
-                <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                 <feMerge>
                   <feMergeNode in="coloredBlur" />
                   <feMergeNode in="SourceGraphic" />
@@ -79,33 +55,27 @@
             <text x="100" y="125" font-family="Arial, sans-serif" font-size="72" fill="white" text-anchor="middle" font-weight="bold">L</text>
           </svg>
           <span class="logo-text">Lumina Development</span>
+        </div>
 
+        <div class="language-switcher">
+          <button class="language-button active" onclick="switchLanguage('en')">EN</button>
+          <button class="language-button" onclick="switchLanguage('jp')">日本語</button>
+        </div>
       </div>
-
-      <div class="language-switcher">
-        <button class="language-button active" onclick="switchLanguage('en')">EN</button>
-        <button class="language-button" onclick="switchLanguage('jp')">日本語</button>
-      </div>
-    </div>
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="tech-animation" id="tech-animation"></div>
-    <div class="glow-effect glow-1"></div>
-    <div class="glow-effect glow-2"></div>
-    <div class="chip-decoration chip-1"></div>
-    <div class="chip-decoration chip-2"></div>
+  <section class="hero">
     <div class="container">
       <div class="hero-content en">
-        <h1>Security to protect you.</h1>
-        <p>Lumina Development builds advanced cryptographic libraries designed to withstand the computational power of quantum computers, keeping data secure in the post-quantum era.</p>
-        <button class="cta-button">Explore Our Technology</button>
+        <h1>Security to Protect You</h1>
+        <p>Building quantum-resistant cryptographic solutions to secure your data in the post-quantum era. We're pioneering the future of cybersecurity with advanced encryption technologies that withstand tomorrow's computational challenges.</p>
+        <button class="cta-button" onclick="scrollToSection('about')">Learn More</button>
       </div>
-      <div class="hero-content jp" style="display: none;">
-        <h1>セキュリティであなたを守る。</h1>
-        <p>Lumina Developmentは、量子コンピュータの計算能力に耐えられるよう設計された高度な暗号ライブラリを構築し、ポスト量子時代においてもデータを安全に保ちます。</p>
-        <button class="cta-button">技術を探索する</button>
+      <div class="hero-content jp">
+        <h1>セキュリティであなたを守る</h1>
+        <p>ポスト量子時代においてデータを保護する量子耐性暗号ソリューションを構築しています。明日の計算上の課題に耐える高度な暗号化技術で、サイバーセキュリティの未来を切り開いています。</p>
+        <button class="cta-button" onclick="scrollToSection('about')">詳しく見る</button>
       </div>
     </div>
   </section>
@@ -113,146 +83,47 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-title en">
-        <h2>Advanced Quantum-Resistant Technology</h2>
+        <h2>Next-Generation Security</h2>
       </div>
-      <div class="section-title jp" style="display: none;">
-        <h2>先進的な耐量子技術</h2>
+      <div class="section-title jp">
+        <h2>次世代セキュリティ</h2>
       </div>
+      
       <div class="feature-grid en">
         <div class="feature-card">
-          <h3>Post-Quantum Cryptography</h3>
-          <p>Our cryptographic libraries implement lattice-based, hash-based, and multivariate-based algorithms that are resistant to attacks from quantum computers, securing your data for decades to come.</p>
+          <h3>Quantum-Resistant</h3>
+          <p>Our cryptographic solutions are designed to withstand attacks from quantum computers, ensuring your data remains secure for decades to come.</p>
         </div>
         <div class="feature-card">
-          <h3>Python-First Development</h3>
-          <p>We provide intuitive Python libraries that make implementing quantum-resistant encryption accessible to developers of all skill levels, with comprehensive documentation and examples.</p>
+          <h3>Developer-Friendly</h3>
+          <p>Intuitive APIs and comprehensive documentation make implementing quantum-resistant encryption accessible to developers of all skill levels.</p>
         </div>
         <div class="feature-card">
-          <h3>End-to-End Encryption</h3>
-          <p>Our messaging solutions provide end-to-end encryption to ensure the privacy and security of your communications.</p>
+          <h3>Future-Proof</h3>
+          <p>Stay ahead of emerging threats with our constantly evolving security solutions, backed by ongoing research and regular updates.</p>
         </div>
         <div class="feature-card">
-          <h3>Seamless Integration</h3>
-          <p>Designed to work with your existing systems through well-documented APIs and drop-in replacements for legacy cryptographic functions, minimizing implementation friction.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Future-Proof Security</h3>
-          <p>Stay ahead of emerging quantum threats with our constantly evolving security solutions, backed by ongoing research and updates to address newly discovered vulnerabilities.</p>
+          <h3>Open Source</h3>
+          <p>Transparent, community-driven development ensures trust and allows for collaborative improvement of our security solutions.</p>
         </div>
       </div>
-      <div class="feature-grid jp" style="display: none;">
-        <div class="feature-card">
-          <h3>ポスト量子暗号</h3>
-          <p>格子ベース、ハッシュベース、多変数ベースのアルゴリズムを実装した暗号ライブラリは、量子コンピュータからの攻撃に耐性があり、今後数十年にわたりデータを安全に保護します。</p>
-        </div>
-        <div class="feature-card">
-          <h3>Pythonファースト開発</h3>
-          <p>包括的なドキュメントと例を備えた直感的なPythonライブラリを提供し、あらゆるスキルレベルの開発者が耐量子暗号を実装できるようにします。</p>
-        </div>
-        <div class="feature-card">
-          <h3>エンドツーエンド暗号化</h3>
-          <p>当グループのメッセージングソリューションは、エンドツーエンド暗号化を提供し、通信のプライバシーと安全性を確保します。</p>
-        </div>
-        <div class="feature-card">
-          <h3>シームレスな統合</h3>
-          <p>十分に文書化されたAPIと従来の暗号関数の代替品を通じて既存のシステムとの連携がスムーズに行え、実装の摩擦を最小限に抑えるように設計されています。</p>
-        </div>
-        <div class="feature-card">
-          <h3>将来性のあるセキュリティ</h3>
-          <p>継続的な研究と新たに発見された脆弱性に対処するためのアップデートに支えられた、常に進化するセキュリティソリューションで、新たな量子の脅威に先んじましょう。</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="products" id="products">
-    <div class="container">
-      <div class="section-title en">
-        <h2>Our Quantum-Resistant Products</h2>
-      </div>
-      <div class="section-title jp" style="display: none;">
-        <h2>量子耐性製品</h2>
-      </div>
-      <div class="en">
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/AQE">
-          <h3>AQE</h3>
-          <p>Our flagship quantum-resistant encryption library for Python developers, featuring easy-to-use implementations of lattice-based encryption algorithms.</p>
-          <pre><code>
-# just 3 lines to generate quantum-resistant encryption
-kex = QuantumSafeKEX()
-transport = SecureTransport(await kex.exchange(peer_awa)[0])
-encrypted = await transport.encrypt(your_data)
-          </code></pre>
+      <div class="feature-grid jp">
+        <div class="feature-card">
+          <h3>量子耐性</h3>
+          <p>量子コンピュータからの攻撃に耐えるよう設計された暗号ソリューションで、今後数十年にわたりデータを安全に保護します。</p>
         </div>
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/Encapsule">
-          <h3>Encapsule(Coming soon)</h3>
-          <p>Encapsule is a messenger application that allows users to communicate anonymously and securely.</p>
-          <ul>
-            <li>The comfort of Discord, combined with its unique quantum-resistant strong encryption library (AQE), provides a messaging experience that is far more anonymous than existing messengers.</li>
-          </ul>
+        <div class="feature-card">
+          <h3>開発者フレンドリー</h3>
+          <p>直感的なAPIと包括的なドキュメントにより、あらゆるスキルレベルの開発者が量子耐性暗号を実装できます。</p>
         </div>
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/alzam">
-          <h3>Alzam(Coming soon)</h3>
-          <p>Secure file storage solution with quantum-resistant encryption for sensitive documents, ensuring your data remains protected even against future quantum attacks.</p>
-          <ul>
-            <li>Transparent client-side encryption before data leaves your device</li>
-            <li>Zero-knowledge architecture - we never see your encryption keys</li>
-            <li>Fine-grained access control and permission management</li>
-            <li>Detailed audit logging of all access attempts</li>
-          </ul>
-          <pre><code>
-from alzam import VaultClient
-client = VaultClient(api_key="your_api_key")
-financial_vault = client.create_vault("Financial Documents")
-financial_vault.store_file(
-    file_path="/path/to/tax_returns.pdf",
-    description="2024 Tax Returns",
-    tags=["taxes", "finance", "2024"]
-)
-tax_file = financial_vault.get_file("2024 Tax Returns")
-tax_file.save_to("/path/to/destination/")
-          </code></pre>
+        <div class="feature-card">
+          <h3>将来性</h3>
+          <p>継続的な研究と定期的なアップデートに支えられた、常に進化するセキュリティソリューションで新たな脅威に先んじます。</p>
         </div>
-      </div>
-      <div class="jp" style="display: none;">
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/AQE">
-          <h3>AQE</h3>
-          <p>Python開発者向けの主力量子耐性暗号化ライブラリで、格子ベースの暗号化アルゴリズムの使いやすい実装を提供します。</p>
-          <pre><code>
-# just 3 lines to generate quantum-resistant encryption
-kex = QuantumSafeKEX()
-transport = SecureTransport(await kex.exchange(peer_awa)[0])
-encrypted = await transport.encrypt(your_data)
-          </code></pre>
-        </div>
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/Encapsule">
-          <h3>Encapsule(近日公開)</h3>
-          <p>Encapsuleは、匿名で安全にコミュニケーションができるメッセンジャーアプリです。</p>
-          <ul>
-            <li>Discordの快適な操作性と、独自の量子耐性を備えた強力な暗号化ライブラリ(AQE)を兼ね備えた、既存のメッセンジャーよりはるかに匿名度の高いメッセージング体験を提供します。</li>
-          </ul>
-        </div>
-        <div class="product-card" data-github-url="https://github.com/Lumina-Group/alzam">
-          <h3>Alzam(近日実装)</h3>
-          <p>セキュアなファイル・ストレージ・ソリューションは、量子力学的攻撃に対する耐性を備えた暗号化機能により、ファイルを保護します。</p>
-          <ul>
-            <li>データがデバイスを離れる前に透過的なクライアントサイド暗号化を実施</li>
-            <li>ゼロ知識アーキテクチャ - 当グループは暗号鍵を一切取得しません</li>
-            <li>細かく設定可能なアクセス制御と権限管理</li>
-            <li>すべてのアクセス試行を記録する詳細な監査ログ</li>
-          </ul>
-          <pre><code>
-from alzam import VaultClient
-client = VaultClient(api_key="your_api_key")
-financial_vault = client.create_vault("Financial Documents")
-financial_vault.store_file(
-    file_path="/path/to/tax_returns.pdf",
-    description="2024 Tax Returns",
-    tags=["taxes", "finance", "2024"]
-)
-tax_file = financial_vault.get_file("2024 Tax Returns")
-tax_file.save_to("/path/to/destination/")
-          </code></pre>
+        <div class="feature-card">
+          <h3>オープンソース</h3>
+          <p>透明性のあるコミュニティ主導の開発により信頼を確保し、セキュリティソリューションの協力的な改善を可能にします。</p>
         </div>
       </div>
     </div>
@@ -263,38 +134,37 @@ tax_file.save_to("/path/to/destination/")
       <div class="section-title en">
         <h2>About Lumina Development</h2>
       </div>
-      <div class="section-title jp" style="display: none;">
+      <div class="section-title jp">
         <h2>Lumina Developmentについて</h2>
       </div>
+      
       <div class="about-content en">
-        <p>Lumina Development was founded in 2025 by a team dedicated to developing quantum-resistant security solutions that are accessible to all, in anticipation of the coming era of quantum computing.</p>
-        <p>Currently, development is led by a single founder, but we are actively looking for engineers and researchers who share our vision to build a more secure future together.</p>
-        <p>We welcome individuals from diverse backgrounds to collaborate in transforming cutting-edge cryptography into practical security solutions.</p>
+        <p>Founded in 2025, Lumina Development is dedicated to creating quantum-resistant security solutions that are accessible to everyone, in anticipation of the quantum computing era.</p>
+        <p>Currently led by a passionate founder, we are actively seeking engineers and researchers who share our vision to build a more secure future together.</p>
+        <p>We welcome talented individuals from diverse backgrounds to join our mission of transforming cutting-edge cryptography into practical security solutions for tomorrow's digital world.</p>
       </div>
-      <div class="about-content jp" style="display: none;">
-        <p>Lumina Developmentは、量子コンピューティング時代の到来を見据え、誰もが利用しやすい耐量子セキュリティソリューションの開発に取り組むチームによって2025年に設立されました。</p>
-        <p>現在は創業者1人で開発を進めていますが、より安全な未来を共に築く志を持つエンジニアや研究者を募集しています。</p>
-        <p>多様なバックグラウンドを持つ仲間と協力し、最先端の暗号技術を実用的なセキュリティソリューションへと昇華させていきましょう。</p>
+
+      <div class="about-content jp">
+        <p>2025年に設立されたLumina Developmentは、量子コンピューティング時代を見据え、誰もが利用できる量子耐性セキュリティソリューションの開発に取り組んでいます。</p>
+        <p>現在は創業者が主導していますが、より安全な未来を共に築く志を持つエンジニアや研究者を積極的に募集しています。</p>
+        <p>多様なバックグラウンドを持つ才能ある仲間と協力し、最先端の暗号技術を明日のデジタル世界のための実用的なセキュリティソリューションへと変革する使命に参加していただけることを歓迎します。</p>
       </div>
+    </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-title en">
-        <h2>Contacts</h2>
+        <h2>Get in Touch</h2>
       </div>
-      <div class="section-title jp" style="display: none;">
-        <h2>お問い合わせ先</h2>
+      <div class="section-title jp">
+        <h2>お問い合わせ</h2>
       </div>
-      <div class="contact-content en">
-        <button class="cta-button" data-url="https://discord.gg/y9TURVfVyb">Discord</button>
-        <button class="cta-button" data-url="https://x.com/Meowkawaii_jp">X</button>
-        <button class="cta-button" data-url="mailto:example.example.1.mm@icloud.com">Mail</button>
-      </div>
-      <div class="contact-content jp" style="display: none;">
-        <button class="cta-button" data-url="https://discord.gg/y9TURVfVyb">Discord</button>
-        <button class="cta-button" data-url="https://x.com/Meowkawaii_jp">X</button>
-       <button class="cta-button" data-url="mailto:example.example.1.mm@icloud.com">Mail</button>
+      
+      <div class="contact-content">
+        <a href="https://discord.gg/y9TURVfVyb" class="contact-button" target="_blank">Discord</a>
+        <a href="https://x.com/Meowkawaii_jp" class="contact-button" target="_blank">X (Twitter)</a>
+        <a href="mailto:example.example.1.mm@icloud.com" class="contact-button">Email</a>
       </div>
     </div>
   </section>
@@ -302,12 +172,13 @@ tax_file.save_to("/path/to/destination/")
   <footer>
     <div class="container">
       <p class="en">© 2025 Lumina Development. All rights reserved.</p>
-      <p class="jp" style="display: none;">© 2025 Lumina Development. 全著作権所有。</p>
+      <p class="jp">© 2025 Lumina Development. 全著作権所有。</p>
     </div>
   </footer>
 
   <script>
-     function switchLanguage(lang) {
+    // Language switching
+    function switchLanguage(lang) {
       const english = document.querySelectorAll('.en');
       const japanese = document.querySelectorAll('.jp');
       const enButton = document.querySelector('.language-button:first-child');
@@ -326,93 +197,49 @@ tax_file.save_to("/path/to/destination/")
         jpButton.classList.add('active');
         document.documentElement.setAttribute('lang', 'jp');
       }
-      
-      localStorage.setItem('preferred-language', lang);
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedLanguage = localStorage.getItem('preferred-language');
-      if (savedLanguage) {
-        switchLanguage(savedLanguage);
-      }
-      
-      createTechAnimation();
-    });
-    function createTechAnimation() {
-      const container = document.getElementById('tech-animation');
-      const containerWidth = container.offsetWidth;
-      const containerHeight = container.offsetHeight;
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.style.left = Math.random() * containerWidth + 'px';
-        particle.style.top = Math.random() * containerHeight + 'px';
-        particle.style.opacity = Math.random() * 0.5 + 0.2;
-        particle.style.animation = `pulse ${Math.random() * 3 + 2}s infinite`;
-        container.appendChild(particle);
-      }
-      for (let i = 0; i < 10; i++) {
-        const line = document.createElement('div');
-        line.classList.add('line');
-        line.style.top = Math.random() * containerHeight + 'px';
-        line.style.width = Math.random() * 300 + 100 + 'px';
-        line.style.left = Math.random() * containerWidth + 'px';
-        line.style.opacity = Math.random() * 0.3 + 0.1;
-        container.appendChild(line);
-      }
     }
 
-    window.addEventListener('load', createTechAnimation);
-
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('click', function(e) {
-        if (e.target.closest('button, a, code')) return;
-        const githubUrl = this.dataset.githubUrl;
-        if (githubUrl) {
-          window.open(githubUrl, '_blank');
-        }
-      });
-    });
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('click', function(e) {
-        if (e.target.closest('button, a, code')) return;
-        const githubUrl = "this.dataset.githubUrl";
-        if (githubUrl) {
-          window.open(githubUrl, '_blank');
-        }
-      });
-    });
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
+    // Smooth scrolling
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
         });
-        document.querySelector('nav').classList.remove('mobile-menu-open');
-      });
-    });
+      }
+    }
 
-    document.querySelector('.hero .cta-button').addEventListener('click', function() {
-      const contactSection = document.querySelector('#products');
-      window.scrollTo({
-        top: contactSection.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    });
+    // Particle animation
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 50;
 
-    document.querySelectorAll('.cta-button').forEach(button => {
-      button.addEventListener('click', function() {
-        const url = this.getAttribute('data-url');
-        if (url) {
-          if (url.startsWith('mailto:')) {
-            window.location.href = url;
-          } else {
-            window.open(url, '_blank');
-          }
-        }
-      });
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Header scroll effect
+    function handleScroll() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(10, 10, 10, 0.98)';
+      } else {
+        header.style.background = 'rgba(10, 10, 10, 0.95)';
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      createParticles();
+      window.addEventListener('scroll', handleScroll);
     });
   </script>
 </body>
