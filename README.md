@@ -15,7 +15,7 @@
 
 4. 
 ## **貢献方法**  
-1. **コミュニティ**: Discordで議論に参加  
+1. **コミュニティ**: [Discord](https://discord.gg/y9TURVfVyb)で議論に参加  
 
 ## **リンク**  
 - 公式サイト: [https://lumina-group.github.io/Lumina](https://lumina-group.github.io/Lumina/)  
