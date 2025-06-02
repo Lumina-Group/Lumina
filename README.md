@@ -10,7 +10,7 @@
 ## **プロジェクト一覧**  
 現在進行中の主なプロジェクト:  
 1. **Vinci** - 検閲耐性のある分散型SNSプロトコル  
-2. **AQE** - ハイブリット量子暗号交換プロトコル  
+2. **[AQE](https://github.com/Lumina-Group/AQE)** - ハイブリット量子暗号交換プロトコル  
 3. **ASPA** - 適応型NIDSシステム
 ## **貢献方法**  
 1. **コミュニティ**: [Discord](https://discord.gg/y9TURVfVyb)で議論に参加  
