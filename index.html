@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta Tags -->
-  <title>Lumina Development | Digital Privacy & Freedom</title>
-  <meta name="description" content="Tools and communities that protect digital privacy and enable free expression. Empowering individuals against surveillance and censorship.">
-  
-  <!-- Language -->
-  <meta http-equiv="Content-Language" content="en,ja">
-  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Group</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Canonical URL -->
   <link rel="canonical" href="https://Lumina-Group.github.io/">
   
@@ -23,225 +25,80 @@
   <meta name="twitter:title" content="Lumina Development | Digital Privacy & Freedom">
   <meta name="twitter:description" content="Building tools that protect digital rights and enable free expression">
   <meta name="twitter:image" content="https://Lumina-Group.github.io/resource/lumina.png">
-  <link rel="stylesheet" href="css/style.css">
-  
+  <resource type="image/png" href="https://Lumina-Group.github.io/resource/lumina.png" />
+  <resource type="stylesheet" href="resource/style.css" />
+
 </head>
 <body>
-  <div class="particles" id="particles"></div>
 
-  <header>
     <div class="container">
-      <div class="header-content">
-        <div class="logo-container">
-          <svg class="logo" width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#0400ff;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#8c00ff;stop-opacity:1" />
-              </radialGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                <feMerge>
-                  <feMergeNode in="coloredBlur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-            <circle cx="100" cy="100" r="80" fill="url(#grad1)" filter="url(#glow)" />
-            <text x="100" y="125" font-family="Arial, sans-serif" font-size="72" fill="white" text-anchor="middle" font-weight="bold">L</text>
-          </svg>
-          <span class="logo-text">Lumina Development</span>
-        </div>
 
-        <div class="language-switcher">
-          <button class="language-button active" onclick="switchLanguage('en')">EN</button>
-          <button class="language-button" onclick="switchLanguage('jp')">日本語</button>
-        </div>
-      </div>
+        <!-- 1. Hero Section -->
+        <header class="hero">
+            <h1>技術でプライバシーと自由を守る</h1>
+            <a href="https://discord.gg/y9TURVfVyb" class="btn" target="_blank" rel="noopener noreferrer">コミュニティに参加する</a>
+        </header>
+
+        <main>
+            <!-- 2. Mission Section -->
+            <section id="mission">
+                <h2>私たちの使命</h2>
+                <ul class="mission-list">
+                    <li>デジタル権利を人権として守る</li>
+                    <li>誰もが安心して話せる空間の創出</li>
+                    <li>教育と技術で社会変革を実現</li>
+                </ul>
+            </section>
+
+            <!-- 3. Projects Section -->
+            <section id="projects">
+                <h2>私たちのプロジェクト</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Hikari</h3>
+                        <p>オンライン上の対話における心理的安全性の可視化と支援を行うAIシステムです。個人の発言が他者に与える安心感や場の空気をスコアとして可視化し、AIが建設的なリライトや視点のバランスを提案することで、誹謗中傷や排除を防ぎつつ、対話の質を高めることを目指します。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Vinci</h3>
+                        <p>暗号技術に基づく匿名性と検閲耐性を備えた新しい通信プロトコルの開発を行うプロジェクトです。国家やプラットフォームによる過剰な監視・検閲から個人の自由を守り、誰もが安心して情報発信や対話ができる技術的基盤の構築を目指します。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Join / Links Section -->
+            <section id="join" class="join-links">
+                <h2>今すぐ参加する</h2>
+                <p>私たちの活動に興味を持っていただけましたか？<br>Discordで議論に参加し、世界をより良くする活動に貢献してください。</p>
+                <br>
+                <a href="https://discord.gg/y9TURVfVyb" class="btn" target="_blank" rel="noopener noreferrer">Discordに参加する</a>
+                
+                <a href="https://github.com/lumina-group/Lumina" class="github-link" target="_blank" rel="noopener noreferrer">GitHubでプロジェクトを見る</a>
+
+                <p class="contact-info">
+                    お問い合わせ: <a href="mailto:example.example.1.mm@icloud.com">example.example.1.mm@icloud.com</a>
+                </p>
+            </section>
+        </main>
+
+        <!-- 4. Footer -->
+        <footer class="site-footer">
+            <p>Copyright &copy; Lumina 2025</p>
+            <div class="social-links">
+                <a href="https://x.com/w85235" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.gg/y9TURVfVyb" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://lumina-group.github.io/Lumina" target="_blank" rel="noopener noreferrer" aria-label="Official Website"><i class="fa-solid fa-globe"></i></a>
+            </div>
+        </footer>
+
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content en">
-        <h1>Defending Your Digital Freedom</h1>
-        <p>We build tools and communities that protect privacy and enable free expression in the digital world. Our mission is to create technologies that empower individuals against surveillance and censorship.</p>
-        <p>    「 Without privacy, there is no true freedom.」    </p>
-        <p>As surveillance capitalism and government censorship expand, we offer a means of technological resistance.</p>
-        <button class="cta-button" onclick="scrollToSection('about')">Join Our Mission</button>
-      </div>
-      <div class="hero-content jp">
-        <h1>デジタル自由を守る</h1>
-        <p>私たちはデジタル世界におけるプライバシー保護と自由な表現を可能にするツールとコミュニティを構築しています。監視や検閲に対抗し、個人をエンパワーする技術を作ることが私たちの使命です。</p>
-        <p>    「プライバシーがなければ、真の自由は存在しない」    </p>
-        <p>監視資本主義や政府の検閲が拡大する中、技術で抵抗する手段を提供します。</p>
-        <button class="cta-button" onclick="scrollToSection('about')">参加する</button>
-      </div>
-    </div>
-  </section>
+    <!-- Vanilla JS (if needed in the future) -->
+    <script>
+        // A simple script to confirm everything is loaded.
+        // No dynamic functionality is required by the prompt,
+        // but this is where it would go.
+        console.log("Lumina website loaded successfully.");
+    </script>
 
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-title en">
-        <h2>Our Principles</h2>
-      </div>
-      <div class="section-title jp">
-        <h2>私たちの理念</h2>
-      </div>
-      
-      <div class="feature-grid en">
-        <div class="feature-card">
-          <h3>Privacy First</h3>
-          <p>We design all our tools with privacy as the fundamental principle, ensuring your data belongs only to you.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Anti-Censorship</h3>
-          <p>Our technologies are built to resist censorship and enable free expression in the digital space.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Quantum-Resistant</h3>
-          <p>Our cryptographic solutions are designed to withstand attacks from quantum computers, ensuring your data remains secure for decades to come.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Future-Proof</h3>
-          <p>Stay ahead of emerging threats with our constantly evolving security solutions, backed by ongoing research and regular updates.</p>
-        </div>
-      </div>
-
-      <div class="feature-grid jp">
-        <div class="feature-card">
-          <h3>プライバシー第一</h3>
-          <p>すべてのツールはプライバシーを基本原則として設計され、あなたのデータはあなただけのものです。</p>
-        </div>
-        <div class="feature-card">
-          <h3>検閲抵抗性</h3>
-          <p>私たちの技術は検閲に抵抗し、デジタル空間での自由な表現を可能にするために構築されています。</p>
-        </div>
-        <div class="feature-card">
-          <h3>量子耐性</h3>
-          <p>量子コンピュータからの攻撃に耐えるよう設計された暗号ソリューションで、今後数十年にわたりデータを安全に保護します。</p>
-        </div>
-        <div class="feature-card">
-          <h3>将来性</h3>
-          <p>継続的な研究と定期的なアップデートに支えられた、常に進化するセキュリティソリューションで新たな脅威に先んじます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container">
-      <div class="section-title en">
-        <h2>About Lumina Development</h2>
-      </div>
-      <div class="section-title jp">
-        <h2>Lumina Developmentについて</h2>
-      </div>
-      
-      <div class="about-content en">
-        <p>Founded in 2025, Lumina Development is a collective dedicated to protecting digital privacy and freedom in an increasingly surveilled world.</p>
-        <p>We believe in a future where technology empowers rather than restricts, where privacy is a fundamental right, not a privilege.</p>
-        <p>Join us in building tools and solutions that safeguard digital rights and create spaces for free expression in the online world.</p>
-      </div>
-
-      <div class="about-content jp">
-        <p>2025年に設立されたLumina Developmentは、監視が強まる現代社会においてデジタルプライバシーと自由を守るために活動するグループです。</p>
-        <p>私たちは、技術が制限ではなく解放をもたらし、プライバシーが特権ではなく基本的人権である未来を信じています。</p>
-        <p>オンライン世界における表現の自由とデジタル権利を守るツールやソリューションを共に作りましょう。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-title en">
-        <h2>Get in Touch</h2>
-      </div>
-      <div class="section-title jp">
-        <h2>お問い合わせ</h2>
-      </div>
-      
-      <div class="contact-content">
-        <a href="https://discord.gg/y9TURVfVyb" class="contact-button" target="_blank">Discord</a>
-        <a href="https://x.com/w85235" class="contact-button" target="_blank">X (Twitter)</a>
-        <a href="https://github.com/orgs/Lumina-Group" class="contact-button" target="_blank">GitHub</a>
-        <a href="mailto:example.example.1.mm@icloud.com" class="contact-button">Email</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p class="en">© 2025 Lumina Development. All rights reserved.</p>
-      <p class="jp">© 2025 Lumina Development. 全著作権所有。</p>
-    </div>
-  </footer>
-
-  <script>
-    // Language switching
-    function switchLanguage(lang) {
-      const english = document.querySelectorAll('.en');
-      const japanese = document.querySelectorAll('.jp');
-      const enButton = document.querySelector('.language-button:first-child');
-      const jpButton = document.querySelector('.language-button:last-child');
-      
-      if (lang === 'en') {
-        english.forEach(el => el.style.display = 'block');
-        japanese.forEach(el => el.style.display = 'none');
-        enButton.classList.add('active');
-        jpButton.classList.remove('active');
-        document.documentElement.setAttribute('lang', 'en');
-      } else {
-        english.forEach(el => el.style.display = 'none');
-        japanese.forEach(el => el.style.display = 'block');
-        enButton.classList.remove('active');
-        jpButton.classList.add('active');
-        document.documentElement.setAttribute('lang', 'jp');
-      }
-    }
-
-    // Smooth scrolling
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-
-    // Particle animation
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 50;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 3 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        particlesContainer.appendChild(particle);
-      }
-    }
-
-    // Header scroll effect
-    function handleScroll() {
-      const header = document.querySelector('header');
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(10, 10, 10, 0.98)';
-      } else {
-        header.style.background = 'rgba(10, 10, 10, 0.95)';
-      }
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', function() {
-      createParticles();
-      window.addEventListener('scroll', handleScroll);
-    });
-  </script>
 </body>
 </html>

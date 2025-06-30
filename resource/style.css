@@ -1,0 +1,286 @@
+
+
+        /* --- Reset & Base Styles --- */
+        :root {
+            --bg-color: #f8f9fa; /* Light background */
+            --text-color: #343a40; /* Darker text for contrast */
+            --primary-color: #007bff; /* Vibrant blue */
+            --accent-color: #6c757d; /* Muted grey for secondary text */
+            --container-width: 960px; /* Slightly wider container */
+            --border-color: #e9ecef; /* Light border for separation */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6; /* Slightly tighter line height */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0; /* More vertical padding */
+            text-align: center;
+        }
+
+        /* --- Typography --- */
+        h1, h2 {
+            font-weight: 700;
+            letter-spacing: -0.03em; /* Tighter letter spacing */
+            color: #212529; /* Even darker for headings */
+        }
+
+        h1 {
+            font-size: 3.5rem; /* Slightly smaller, more balanced */
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem; /* Slightly smaller */
+            margin-bottom: 2.5rem; /* More space below heading */
+            color: #212529; /* Even darker for headings */
+        }
+
+        p {
+            max-width: 700px; /* Wider paragraph width */
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--accent-color); /* Use accent color for body text */
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-item a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 120px 0; /* Increased padding for hero */
+            background-color: #ffffff; /* White background for hero */
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 4.5rem; /* Larger hero heading */
+            color: var(--text-color);
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem; /* Larger subtitle */
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--accent-color);
+        }
+
+        /* --- Mission Section --- */
+        .mission-list {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+            font-size: 1.15rem; /* Slightly larger font */
+            color: var(--text-color);
+        }
+
+        .mission-list li {
+            margin-bottom: 1.2rem; /* More space between list items */
+            padding-left: 2em; /* More padding for checkmark */
+            position: relative;
+        }
+
+        .mission-list li::before {
+            content: '✔'; /* Modern checkmark */
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.3em;
+            top: 0;
+        }
+
+        /* --- Projects Section --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            max-width: none; /* Override global p max-width */
+        }
+
+        .project-card .btn {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* --- Join Section --- */
+        .join-links .contact-info {
+            margin-top: 3rem; /* More space */
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .join-links .contact-info a {
+            color: var(--primary-color); /* Primary color for links */
+            text-decoration: none;
+            border-bottom: 1px solid transparent; /* Subtle underline */
+            transition: border-color 0.2s ease;
+        }
+        .join-links .contact-info a:hover {
+            border-bottom-color: var(--primary-color);
+        }
+
+        .github-link {
+            display: inline-block; /* Changed to inline-block for better spacing */
+            margin-top: 2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.s ease;
+        }
+        .github-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem; /* More padding */
+            background-color: var(--primary-color);
+            color: #ffffff; /* White text on primary button */
+            font-weight: 600; /* Slightly less bold */
+            text-decoration: none;
+            border-radius: 8px; /* More rounded corners */
+            transition: all 0.3s ease; /* Smoother transition */
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Subtle shadow */
+        }
+
+        .btn:hover {
+            transform: translateY(-2px); /* Less aggressive lift */
+            box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3); /* More prominent shadow on hover */
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            border-top: 1px solid var(--border-color); /* Lighter border */
+            padding: 40px 0; /* More padding */
+            text-align: center;
+            font-size: 0.85rem; /* Slightly smaller font */
+            color: var(--accent-color); /* Accent color for footer text */
+            background-color: #ffffff; /* White background for footer */
+        }
+
+        .social-links {
+            margin-top: 1.5rem; /* More space */
+        }
+
+        .social-links a {
+            color: var(--accent-color); /* Accent color for social icons */
+            font-size: 1.6rem; /* Slightly larger icons */
+            margin: 0 0.8rem; /* Tighter spacing */
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            section, .hero {
+                padding: 60px 0;
+            }
+            .btn {
+                padding: 0.8rem 2rem;
+            }
+        }
