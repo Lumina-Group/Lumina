@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌟 Lumina Development
+# Lumina Development
 
 ### *デジタルプライバシー・自由・心理的安全性を守る技術開発*
 
@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Open_Source-green?style=for-the-badge)](LICENSE)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
 
-![Vinci GIF](resource/vinci.gif)
+![Vinci GIF](resource/lumina.png)
 
 </div>
 
