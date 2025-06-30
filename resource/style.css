@@ -121,10 +121,10 @@
         }
 
         .hero .subtitle {
-            font-size: 1.4rem; /* Larger subtitle */
-            margin-top: 1.5rem;
+            font-size: 1.3rem; /* Larger subtitle */
+            margin-top: 1.3rem;
             margin-bottom: 3rem;
-            color: var(--accent-color);
+            /* color: var(--accent-color); */
         }
 
         /* --- Mission Section --- */

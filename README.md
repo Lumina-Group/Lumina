@@ -1,17 +1,196 @@
-# **Lumina Development**  
-**デジタルプライバシーと自由を守る技術の開発**  
-[![Join Community](https://img.shields.io/badge/Join-Community-green)](https://discord.gg/y9TURVfVyb)  
+<div align="center">
 
-## **使命 (Mission)**  
-私たちは、監視社会や検閲に対抗し、**プライバシー保護**と**表現の自由**そして**心理的安全性**が保障された社会を技術で実現することを目指しています。  
-- デジタル権利を基本的人権として守る  
-- ユーザーのエンパワーメントと教育を通じた社会変革
-- 誰もが傷つかず建設的な会話ができる社会実現
+# 🌟 Lumina Development
 
-## **貢献方法**  
-1. **コミュニティ**: [Discord](https://discord.gg/y9TURVfVyb)で議論に参加  
+### *デジタルプライバシー・自由・心理的安全性を守る技術開発*
 
-## **リンク**  
-- 公式サイト: [https://lumina-group.github.io/Lumina](https://lumina-group.github.io/Lumina/)  
-- 問い合わせ: `example.example.1.mm@icloud.com`  
+[![Join Community](https://img.shields.io/badge/Join-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
+[![License](https://img.shields.io/badge/License-Open_Source-green?style=for-the-badge)](LICENSE)
+[![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
 
+![Vinci GIF](resource/vinci.gif)
+
+</div>
+
+---
+
+## 📋 目次
+
+- [🌐 概要](#-概要)
+- [🧠 主なプロジェクト](#-主なプロジェクト)
+- [🎯 私たちの使命](#-私たちの使命)
+- [🚀 技術スタック](#-技術スタック)
+- [📊 プロジェクト状況](#-プロジェクト状況)
+- [🤝 参加方法](#-参加方法)
+- [🛠 開発と貢献](#-開発と貢献)
+- [📜 行動規範](#-行動規範)
+- [📞 お問い合わせ](#-お問い合わせ)
+
+---
+
+## 🌐 概要
+
+> **自由で安心なデジタル空間を、技術の力で実現する**
+
+**Lumina**は、監視や検閲、誹謗中傷などが蔓延する現代のデジタル空間において、**プライバシー**・**表現の自由**・**心理的安全性**を保障することを目的とした、非営利のオープン技術コミュニティです。
+
+私たちは、技術そのものの設計を通じて、「自由で安心な情報環境」の社会実装を目指しています。
+
+### 🌍 なぜLuminaが必要なのか
+
+- 📈 **増加する監視**: 政府や企業による個人データの過度な収集
+- 🚫 **検閲の拡大**: 表現の自由が制限される事例の増加
+- 💔 **心理的被害**: オンライン上での誹謗中傷や排除の問題
+- 🔒 **プライバシーの侵害**: 個人の権利が軽視される現状
+
+---
+
+## 🧠 主なプロジェクト
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔷 Hikari
+**AI支援型コミュニケーション支援システム**
+
+心理的安全性を高めるためのAIシステムです。
+
+**主な機能:**
+- 📊 発言の安心度スコア表示
+- ✏️ 建設的なリライト提案
+- 👁️ 視点の偏りの可視化
+- 🎓 教育現場での対話支援
+
+**対象分野:**
+- 教育機関
+- 企業内コミュニケーション
+- オンライン議論プラットフォーム
+
+</td>
+<td width="50%">
+
+### 🔒 Vinci
+**匿名通信プロトコル**
+
+プライバシーと検閲耐性を重視した通信システムです。
+
+**主な機能:**
+- 🔐 エンドツーエンド暗号化
+- 👤 完全匿名通信
+- 🛡️ 検閲耐性
+- 🌐 分散型アーキテクチャ
+
+**技術的特徴:**
+- ゼロ知識証明
+- オニオンルーティング
+- 分散ハッシュテーブル
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 私たちの使命
+
+<div align="center">
+
+### 🛡️ デジタル権利の保護
+*基本的人権としてのプライバシーと表現の自由*
+
+### 💪 ユーザーエンパワーメント
+*技術と教育による個人の力の向上*
+
+### 🤝 安全な対話空間
+*誰もが傷つかず対話できる社会の実現*
+
+</div>
+
+---
+
+## 📊 プロジェクト状況
+
+| プロジェクト | 状況 | 進捗 | 次のマイルストーン |
+|-------------|------|------|-------------------|
+| 🔷 Hikari | 🚧 開発中 | ![30%](https://progress-bar.dev/30) | プロトタイプ完成 |
+| 🔒 Vinci | 🔬 研究段階 | ![15%](https://progress-bar.dev/15) | 基本プロトコル設計 |
+| 🌐 Website | ✅ 完成 | ![100%](https://progress-bar.dev/100) | 継続的改善 |
+
+### 📅 ロードマップ
+
+- **2025 Q1**: Hikariプロトタイプ完成
+- **2025 Q2**: Vinciプロトコル仕様策定
+- **2025 Q3**: 両プロジェクトのアルファ版リリース
+- **2025 Q4**: コミュニティフィードバック反映
+
+---
+
+## 🤝 参加方法
+
+### 💬 コミュニティに参加
+
+<div align="center">
+
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/w85235)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
+
+</div>
+
+### 👥 参加者の種類
+
+| 役割 | 説明 | 歓迎スキル |
+|------|------|-----------|
+| 🧑‍💻 **開発者** | コード開発、アーキテクチャ設計 | Python, Rust, JavaScript, 暗号技術 |
+| 🔬 **研究者** | 学術研究、論文執筆 | 暗号学、AI、社会学、心理学 |
+| 🎨 **デザイナー** | UI/UX、ブランディング | Figma, Adobe Creative Suite |
+| 🏫 **教育者** | 教育現場での実証実験 | 教育学、ファシリテーション |
+| 📝 **ライター** | ドキュメント、ブログ | 技術ライティング、翻訳 |
+| 🌍 **アクティビスト** | 社会課題への取り組み | デジタル権利、プライバシー |
+
+---
+
+## 📜 行動規範
+
+私たちは**包括的で安全なコミュニティ**を目指しています。
+
+### ✅ 推奨される行動
+
+- 🤝 **尊重**: 異なる意見や背景を持つ人々を尊重する
+- 💡 **建設的**: 建設的なフィードバックと議論を心がける
+- 🌱 **成長**: 学習と成長の機会を大切にする
+- 🔒 **プライバシー**: 他者のプライバシーを尊重する
+
+### ❌ 禁止される行動
+
+- 🚫 **ハラスメント**: いかなる形のハラスメントも禁止
+- 💢 **攻撃的言動**: 攻撃的、差別的な言動の禁止
+- 📢 **スパム**: 無関係な宣伝や迷惑行為の禁止
+- 🔓 **プライバシー侵害**: 個人情報の無断公開の禁止
+
+---
+
+## 📞 お問い合わせ
+
+<div align="center">
+
+### 💌 連絡先
+
+**Email**: [example.example.1.mm@icloud.com](mailto:example.example.1.mm@icloud.com)
+
+**Discord**: [コミュニティサーバー](https://discord.gg/y9TURVfVyb)
+
+**Website**: [https://lumina-group.github.io/Lumina](https://lumina-group.github.io/Lumina/)
+
+---
+
+### 🤝 一緒に未来を創りましょう
+
+[![Star this repo](https://img.shields.io/github/stars/lumina-group/Lumina?style=social)](https://github.com/lumina-group/Lumina)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/w85235?style=social)](https://twitter.com/w85235)
+
+**Copyright © Lumina 2025** | Made with ❤️ for digital freedom
+
+</div>
