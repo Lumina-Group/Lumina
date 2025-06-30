@@ -2,7 +2,7 @@
 
 # Lumina Development
 
-### *デジタルプライバシー・自由・心理的安全性を守る技術開発*
+### *自由で安心なデジタル空間を、技術の力で実現する*
 
 [![Join Community](https://img.shields.io/badge/Join-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
 [![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
