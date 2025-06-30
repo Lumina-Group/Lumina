@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Open_Source-green?style=for-the-badge)](LICENSE)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
 
-![Vinci GIF](resource/lumina.png)
+![Lumina Logo](resource/lumina.png)
 
 </div>
 
