@@ -112,8 +112,8 @@
 
 | プロジェクト | 状況 | 進捗 | 次のマイルストーン |
 |-------------|------|------|-------------------|
-| Hikari | 開発中 | ![30%](https://progress-bar.dev/30) | プロトタイプ完成 |
-| Vinci | 開発中 | ![15%](https://progress-bar.dev/15) | 基本プロトコル設計 |
+| Hikari | 開発中 | ![25%](https://progress-bar.dev/30) | プロトタイプ完成 |
+| Vinci | 開発中 | ![35%](https://progress-bar.dev/15) | プロトタイプ完成 |
 | Website | 完成 | ![100%](https://progress-bar.dev/100) | 継続的改善 |
 
 ---
