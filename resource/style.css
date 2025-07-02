@@ -120,11 +120,38 @@
             line-height: 1.1;
         }
 
-        .hero .subtitle {
-            font-size: 1.3rem; /* Larger subtitle */
+        .hero .subtitle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem; /* Adjust space between text and image */
             margin-top: 1.3rem;
-            margin-bottom: 3rem;
-            /* color: var(--accent-color); */
+            margin-bottom: 2rem; /* Reduced margin for smaller subtitle */
+        }
+
+        .hero .subtitle {
+            font-size: 2.5rem; /* Smaller font size for the subtitle */
+            color: var(--text-color);
+            line-height: 1.1;
+        }
+
+        @media (max-width: 768px) {
+            .hero .subtitle {
+                font-size: 2rem; /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero .subtitle {
+                font-size: 1.5rem; /* Adjust for very small screens */
+            }
+        }
+
+        .hero .hero-decorative-image {
+            max-width: 350px; /* Adjust size for Lumina logo */
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         /* --- Mission Section --- */
@@ -210,6 +237,7 @@
         .github-link {
             display: inline-block; /* Changed to inline-block for better spacing */
             margin-top: 2rem;
+            margin-left: 1rem; /* Add space to the left of the GitHub link */
             color: var(--accent-color);
             text-decoration: none;
             font-size: 1.05rem;
@@ -222,7 +250,7 @@
         /* --- Buttons --- */
         .btn {
             display: inline-block;
-            padding: 1rem 3rem; /* More padding */
+            padding: 0.8rem 2rem; /* Reduced padding */
             background-color: var(--primary-color);
             color: #ffffff; /* White text on primary button */
             font-weight: 600; /* Slightly less bold */
@@ -236,6 +264,10 @@
             transform: translateY(-2px); /* Less aggressive lift */
             box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3); /* More prominent shadow on hover */
             background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .hero > .btn {
+            margin: 0 auto;
         }
 
         /* --- Footer --- */
@@ -274,13 +306,48 @@
             .hero h1 {
                 font-size: 3.5rem;
             }
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
+            
             section, .hero {
                 padding: 60px 0;
             }
             .btn {
                 padding: 0.8rem 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr; /* Stack projects on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero .subtitle-wrapper {
+                flex-direction: column; /* Stack subtitle elements */
+                gap: 0.5rem;
+            }
+            .hero .hero-decorative-image {
+                max-width: 150px; 
+            }
+            .mission-list li {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            .social-links a {
+                font-size: 1.4rem;
+                margin: 0 0.6rem;
             }
         }
