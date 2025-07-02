@@ -171,8 +171,6 @@
 
 ### 連絡先
 
-**Email**: [example.example.1.mm@icloud.com](mailto:example.example.1.mm@icloud.com)
-
 **Discord**: [コミュニティサーバー](https://discord.gg/y9TURVfVyb)
 
 **Website**: [https://lumina-group.github.io/Lumina](https://lumina-group.github.io/Lumina/)
