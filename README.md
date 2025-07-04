@@ -1,6 +1,6 @@
 <div align="center">
 
-# Lumina Development
+# Lumina
 
 ### *自由で安心なデジタル空間を、技術の力で実現する*
 
