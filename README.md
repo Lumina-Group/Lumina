@@ -6,7 +6,6 @@
 
 [![Join Community](https://img.shields.io/badge/Join-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
 [![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
-[![License](https://img.shields.io/badge/License-Open_Source-green?style=for-the-badge)](LICENSE)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
 
 ![Lumina Logo](resource/lumina.png)
@@ -31,7 +30,7 @@
 
 > **自由で安心なデジタル空間を、技術の力で実現する**
 
-**Lumina**(ルミナ)は、監視や検閲、誹謗中傷などが蔓延する現代のデジタル空間において、**プライバシー**・**表現の自由**・**心理的安全性**を保障することを目的とした、オープン技術コミュニティです。
+**Lumina**(ルミナ)は、監視や検閲、誹謗中傷などが蔓延する現代のデジタル空間において、**プライバシー**・**表現の自由**・**心理的安全性**を保障することを目的とした、技術コミュニティです。
 
 私たちは、技術そのものの設計を通じて、「心理的安全性が確保されたデジタル空間の創造を通じて、誰もが孤立せず、安心して繋がれる社会の実現」を目指しています。
 
@@ -100,12 +99,6 @@ Luminaは、現代社会の「デジタル化がもたらす二重のひずみ�
 - 完全匿名通信
 - 検閲耐性
 - 分散型アーキテクチャ
-
-**技術的特徴:**
-- ゼロ知識証明
-- オニオンルーティング
-- 分散ハッシュテーブル
-- 自立評価システム
 
 </td>
 </tr>
