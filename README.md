@@ -163,6 +163,6 @@ Luminaは、現代社会の「デジタル化がもたらす二重のひずみ�
 [![Star this repo](https://img.shields.io/github/stars/lumina-group/Lumina?style=social)](https://github.com/lumina-group/Lumina)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/w85235?style=social)](https://twitter.com/w85235)
 
-**Copyright © Lumina 2025** | Made with ❤️ for digital freedom
+**Copyright © Lumina 2025**
 
 </div>
