@@ -2,13 +2,15 @@
 
 # Lumina
 
+![Lumina Logo](resource/lumina.png)
+
 ### *自由で安心なデジタル空間を、技術の力で実現する*
 
 [![Join Community](https://img.shields.io/badge/Join-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
 [![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
-
-![Lumina Logo](resource/lumina.png)
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/w85235)
 
 </div>
 
@@ -20,7 +22,6 @@
 - [私たちの使命](#私たちの使命)
 - [主なプロジェクト](#主なプロジェクト)
 - [プロジェクト状況](#プロジェクト状況)
-- [参加方法](#参加方法)
 - [行動規範](#行動規範)
 - [お問い合わせ](#お問い合わせ)
 
@@ -114,18 +115,6 @@ Luminaは、現代社会の「デジタル化がもたらす二重のひずみ�
 | Website | 完成 | ![100%](https://progress-bar.dev/100) | 継続的改善 |
 
 ---
-
-## 参加方法
-
-### コミュニティに参加
-
-<div align="center">
-
-[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/w85235)
-[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
-
-</div>
 
 ### 参加者の種類
 
