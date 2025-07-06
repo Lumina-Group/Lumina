@@ -1,7 +1,5 @@
 <div align="center">
 
-# Lumina
-
 ![Lumina Logo](resource/lumina.png)
 
 ### *自由で安心なデジタル空間を、技術の力で実現する*
