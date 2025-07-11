@@ -147,21 +147,92 @@
             margin: 0 auto;
         }
 
-        /* --- Mission Section --- */
-        .mission-list {
-            list-style: none;
-            padding: 0;
-            display: inline-block;
-            text-align: left;
-            font-size: 1.15rem; /* Slightly larger font */
-            color: var(--text-color);
-        }
+        /* --- Mission Section: Enhanced Design --- */
+.mission-section {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+    margin: 3rem auto 2rem auto;
+    max-width: 900px;
+}
 
-        .mission-list li {
-            margin-bottom: 1.2rem; /* More space between list items */
-            padding-left: 2em; /* More padding for checkmark */
-            position: relative;
-        }
+.mission-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+}
+.mission-title i {
+    font-size: 1.3em;
+    color: #ffb300;
+}
+.mission-title .en-title {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-left: 0.7em;
+    font-weight: 400;
+}
+
+.mission-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+.mission-card {
+    background: #f8f9fa;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-width: 220px;
+    max-width: 300px;
+    flex: 1 1 220px;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.mission-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+.mission-card p {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.mission-desc {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    color: #343a40;
+    font-size: 1.13rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 900px) {
+    .mission-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .mission-card {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
 
         /* --- Projects Section --- */
         .projects-grid {
