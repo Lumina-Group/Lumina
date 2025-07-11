@@ -29,18 +29,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- Layout --- */
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0; /* More vertical padding */
-            text-align: center;
-        }
-
         /* --- Typography --- */
         h1, h2 {
             font-weight: 700;
@@ -57,6 +45,11 @@
             font-size: 2.2rem; /* Slightly smaller */
             margin-bottom: 2.5rem; /* More space below heading */
             color: #212529; /* Even darker for headings */
+            text-align: center;
+        }
+
+        h3, h4 {
+            text-align: center;
         }
 
         p {
@@ -79,7 +72,7 @@
 
         .navbar .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -103,13 +96,13 @@
             transition: color 0.2s ease;
         }
 
-        .nav-item a:hover {
+        .nav-item a:hover, .nav-item a.active {
             color: var(--primary-color);
         }
 
         /* --- Hero Section --- */
         .hero {
-            padding: 120px 0; /* Increased padding for hero */
+            padding: 60px 0; /* 上部の余白を減らす */
             background-color: #ffffff; /* White background for hero */
             border-bottom: 1px solid var(--border-color);
         }
@@ -148,7 +141,7 @@
         }
 
         .hero .hero-decorative-image {
-            max-width: 350px; /* Adjust size for Lumina logo */
+            max-width: 500px; /* Adjust size for Lumina logo */
             height: auto;
             display: block;
             margin: 0 auto;
@@ -168,16 +161,6 @@
             margin-bottom: 1.2rem; /* More space between list items */
             padding-left: 2em; /* More padding for checkmark */
             position: relative;
-        }
-
-        .mission-list li::before {
-            content: '✔'; /* Modern checkmark */
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.3em;
-            top: 0;
         }
 
         /* --- Projects Section --- */
@@ -205,16 +188,28 @@
             margin-bottom: 1rem;
         }
 
-        .project-card p {
+        .project-card p, .project-card p2 {
             font-size: 1rem;
             color: var(--accent-color);
             margin-bottom: 1.5rem;
-            max-width: none; /* Override global p max-width */
+            max-width: 340px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
         }
 
         .project-card .btn {
             padding: 0.7rem 1.5rem;
             font-size: 0.9rem;
+        }
+
+        .project-logo {
+            width: 280px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         /* --- Join Section --- */
@@ -295,6 +290,55 @@
             color: var(--primary-color);
         }
 
+        /* --- News & Resources Sections --- */
+        #news .project-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: text-decoration 0.2s ease;
+        }
+
+        #news .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        #resources {
+            text-align: center;
+        }
+
+        #resources .mission-list {
+            text-align: center;
+        }
+
+    
+
+        #resources .mission-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        #resources .mission-list a:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+
+        /* --- Join Section --- */
+        #join .project-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #join .project-card p {
+            flex-grow: 1; /* Allows paragraph to grow and push button down */
+        }
+
+        #mission {
+            text-align: center;
+        }
+
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             h1 {
@@ -334,7 +378,7 @@
                 gap: 0.5rem;
             }
             .hero .hero-decorative-image {
-                max-width: 350px; 
+                max-width: 500px; 
             }
             .mission-list li {
                 font-size: 1rem;
