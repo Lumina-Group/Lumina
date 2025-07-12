@@ -17,14 +17,19 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="../index.html">ホーム</a></li>
-                <li class="nav-item"><a href="mission.html">使命</a></li>
-                <li class="nav-item"><a href="news.html">お知らせ</a></li>
-                <li class="nav-item"><a href="projects.html">プロジェクト</a></li>
-                <li class="nav-item"><a href="resources.html">資料室</a></li>
-                <li class="nav-item"><a href="join.html">参加する</a></li>
-            </ul>
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../index.html">ホーム</a></li>
+                    <li class="nav-item"><a href="mission.html">使命</a></li>
+                    <li class="nav-item"><a href="news.html">お知らせ</a></li>
+                    <li class="nav-item"><a href="projects.html">プロジェクト</a></li>
+                    <li class="nav-item"><a href="resources.html">資料室</a></li>
+                    <li class="nav-item"><a href="join.html">参加する</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container">
@@ -59,5 +64,15 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggler.addEventListener('click', () => {
+                navbarCollapse.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
