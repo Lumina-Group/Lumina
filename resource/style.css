@@ -411,13 +411,38 @@
         }
 
         /* --- Responsive Design --- */
+        .navbar-toggler {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
         @media (max-width: 768px) {
             .navbar-nav {
-                display: none; /* Hide navigation links */
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #ffffff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .navbar-nav.active {
+                display: flex;
+            }
+
+            .navbar-toggler {
+                display: block;
             }
 
             .navbar .container {
-                justify-content: space-between; /* Space for a potential menu icon */
+                justify-content: space-between;
             }
 
             h1 {
