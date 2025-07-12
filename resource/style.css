@@ -412,6 +412,14 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
+            .navbar-nav {
+                display: none; /* Hide navigation links */
+            }
+
+            .navbar .container {
+                justify-content: space-between; /* Space for a potential menu icon */
+            }
+
             h1 {
                 font-size: 2.5rem;
             }
@@ -419,18 +427,22 @@
                 font-size: 1.8rem;
             }
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
             
             section, .hero {
-                padding: 60px 0;
+                padding: 40px 20px;
             }
             .btn {
-                padding: 0.8rem 2rem;
+                padding: 0.8rem 1.5rem;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr; /* Stack projects on smaller screens */
+            }
+
+            .hero .hero-decorative-image {
+                max-width: 80%;
             }
         }
 
@@ -442,14 +454,14 @@
                 font-size: 1.5rem;
             }
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             .hero .subtitle-wrapper {
                 flex-direction: column; /* Stack subtitle elements */
                 gap: 0.5rem;
             }
             .hero .hero-decorative-image {
-                max-width: 500px; 
+                max-width: 100%;
             }
             .mission-list li {
                 font-size: 1rem;
@@ -458,7 +470,7 @@
                 font-size: 1rem;
             }
             .btn {
-                padding: 0.7rem 1.5rem;
+                padding: 0.7rem 1.2rem;
                 font-size: 0.9rem;
             }
             .social-links a {
