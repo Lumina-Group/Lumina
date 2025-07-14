@@ -421,7 +421,7 @@
         }
 
         @media (max-width: 768px) {
-            .navbar-nav {
+            .navbar-collapse {
                 display: none;
                 flex-direction: column;
                 width: 100%;
@@ -433,8 +433,8 @@
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
 
-            .navbar-nav.active {
-                display: flex;
+            .navbar-collapse.active {
+                display: block;
             }
 
             .navbar-toggler {
