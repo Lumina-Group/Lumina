@@ -1,6 +1,6 @@
 <div align="center">
 
-![Lumina Logo](resource/lumina.png)
+<img src="resource/lumina.png" alt="Decorative image" class="hero-decorative-image">
 
 ### *自由で安心なデジタル空間を、技術の力で実現する*
 
