@@ -1,25 +1,22 @@
-Business Source License 1.1
-
-Parameters
-
-Licensor: Lumina Group
-Licensed Work: This repository and all its contents
-Additional Use Grant: None
-Change Date: 2027-01-01
-Change License: GNU General Public License, version 3.0 or later
-
-
-Business Source License 1.1
-
-Terms
-
-The Licensor hereby grants you the right to copy, modify, create derivative works, redistribute, and make other uses of the Licensed Work. However, the rights granted are subject to the following conditions:
-
-1. Use Limitation: The Licensed Work may only be used for non-production purposes, except as otherwise allowed by the Additional Use Grant above.
-2. Change Date: The Change Date is the date three years after the initial publication of the Licensed Work. On the Change Date, the Licensed Work will automatically become available under the Change License above.
-3. No Trademark License: This license does not grant you rights to use the Licensor’s name, logo, or trademarks.
-4. No Warranty: The Licensed Work is provided "AS IS" and without warranty.
-
-For more details, see https://mariadb.com/bsl11
+Custom Software License (Non-Commercial, No Redistribution, No Modification)
 
 Copyright (C) 2025 Lumina Group
+
+Permission is hereby granted, free of charge, to any individual or entity obtaining a copy of this software and associated documentation files (the "Software"), to use the Software solely for personal, non-commercial, and research purposes, subject to the following conditions:
+
+1. **Non-Commercial Use Only**
+   - The Software may not be used, in whole or in part, for any commercial purpose. Commercial use includes, but is not limited to, use in a product, service, or offering for which a fee is charged or which is performed for commercial advantage or monetary compensation.
+
+2. **No Redistribution**
+   - You may not distribute, sublicense, publish, or otherwise make the Software available to any third party, in whole or in part, whether modified or unmodified.
+
+3. **No Modification**
+   - You may not modify, adapt, translate, reverse engineer, decompile, disassemble, or create derivative works based upon the Software, in whole or in part.
+
+4. **Copyright Notice**
+   - You must retain this copyright notice in all copies or substantial portions of the Software.
+
+5. **No Warranty**
+   - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+If you have any questions about this license, please contact Lumina Group.
