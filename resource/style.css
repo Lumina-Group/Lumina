@@ -173,7 +173,7 @@
             .navbar-toggler {
                 display: block;
                 position: absolute;
-                left: 1.5rem;
+                right: 1.5rem;
             }
             
             .navbar-collapse {
@@ -287,7 +287,6 @@
             display: block;
             margin: 0 auto;
             filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
-            animation: pulse 3s ease-in-out infinite;
         }
 
         @keyframes pulse {
