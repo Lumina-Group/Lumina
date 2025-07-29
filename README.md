@@ -39,19 +39,6 @@
 
 ---
 
-## 主なプロジェクト
-
-<img src="resource/Hikari.PNG" alt="Hikariロゴ" width="220" />
-
-- 発言の安心度スコア表示
-- 建設的なリライト提案
-- 視点の偏りの可視化
----
-<img src="resource/vinci.png" alt="Vinciロゴ" width="220" />
-
-- **「誰であるか」を明かさずに「信頼できるか」を証明する**新しいパラダイム
----
-
 <div align="center">
 
 [![Star this repo](https://img.shields.io/github/stars/lumina-group/Lumina?style=social)](https://github.com/lumina-group/Lumina)
