@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarToggler.addEventListener('click', () => {
             navbarCollapse.classList.toggle('active');
             navbarToggler.classList.toggle('active');
-            document.body.style.overflow = navbarCollapse.classList.contains('active') ? 'hidden' : '';
+            const isExpanded = navbarCollapse.classList.contains('active');
+            navbarToggler.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+            document.body.style.overflow = isExpanded ? 'hidden' : '';
         });
         
         // Close mobile menu when clicking outside
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
                 navbarCollapse.classList.remove('active');
                 navbarToggler.classList.remove('active');
+                navbarToggler.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             }
         });
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navbarCollapse.classList.remove('active');
                 navbarToggler.classList.remove('active');
+                navbarToggler.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             });
         });
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.mission-card, .project-card, .hero > *, section > h2');
+    const animatedElements = document.querySelectorAll('.mission-card, .project-card, .resource-card, .resource-card-header, .hero > *, section > h2');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

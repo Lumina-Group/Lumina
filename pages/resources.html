@@ -17,7 +17,8 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <button class="navbar-toggler" aria-label="Toggle navigation">
+            <a href="../index.html" class="navbar-brand">Lumina</a>
+            <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="navbar-collapse">
@@ -36,12 +37,49 @@
         <main>
             <section id="resources">
                 <h2>資料室 / Resources</h2>
-                <ul class="mission-list">
-                    <li><a href="#">ホワイトペーパー / 技術設計書</a></li>
-                    <li><a href="#">発表資料・論文</a></li>
-                    <li><a href="https://github.com/Lumina-Group/Lumina/tree/main/resource/documents">ワークショップ資料</a></li>
-                    <li><a href="LICENSE">ライセンス</a></li>
-                </ul>
+                <p class="resources-intro">Luminaの理念・設計・活動を体系的にまとめた資料群です。順次公開していきます。</p>
+                <div class="resource-grid">
+                    <div class="resource-card card-hover">
+                        <div class="resource-card-header">
+                            <div class="resource-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <h3>ホワイトペーパー / 技術設計書</h3>
+                        </div>
+                        <p>背景、課題設定、アーキテクチャ、セキュリティ・設計方針などの中核文書。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn-link disabled" aria-disabled="true"><i class="fa-regular fa-clock"></i> 準備中</a>
+                        </div>
+                    </div>
+                    <div class="resource-card card-hover">
+                        <div class="resource-card-header">
+                            <div class="resource-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3>発表資料・論文</h3>
+                        </div>
+                        <p>登壇スライド、ポスター、テクニカルノート等のアーカイブ。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn-link disabled" aria-disabled="true"><i class="fa-regular fa-clock"></i> 準備中</a>
+                        </div>
+                    </div>
+                    <div class="resource-card card-hover">
+                        <div class="resource-card-header">
+                            <div class="resource-icon"><i class="fa-solid fa-people-group"></i></div>
+                            <h3>ワークショップ資料</h3>
+                        </div>
+                        <p>学習用ドキュメントやハンズオン教材、サンプルコードなど。</p>
+                        <div class="card-actions">
+                            <a href="https://github.com/Lumina-Group/Lumina/tree/main/resource/documents" class="btn-link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> GitHub で見る</a>
+                        </div>
+                    </div>
+                    <div class="resource-card card-hover">
+                        <div class="resource-card-header">
+                            <div class="resource-icon"><i class="fa-regular fa-id-card"></i></div>
+                            <h3>ライセンス</h3>
+                        </div>
+                        <p>本プロジェクトの利用条件とライセンス情報。</p>
+                        <div class="card-actions">
+                            <a href="../LICENSE" class="btn-link"><i class="fa-solid fa-file-contract"></i> LICENSE</a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="site-footer">
