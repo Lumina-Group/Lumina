@@ -1,23 +1,25 @@
 ---
 layout: default
 ---
-<main>
-    <article class="news-article">
-        <header class="article-header">
-            <h1>{{ page.title }}</h1>
-            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="article-date">
-                {{ page.date | date: "%Y年%m月%d日" }}
-            </time>
-        </header>
-        
-        <div class="article-content">
-            {{ content }}
-        </div>
-        
-        <footer class="article-footer">
-            <a href="{{ site.baseurl }}/pages/news.html" class="back-to-news">
-                <i class="fa-solid fa-arrow-left"></i> お知らせ一覧に戻る
-            </a>
-        </footer>
-    </article>
-</main>
+
+<article class="news-article">
+  <h1>{{ page.title }}</h1>
+  <p class="news-date">{{ page.date | date: "%Y年%m月%d日" }}</p>
+  {% if page.author %}
+  <p class="news-author">投稿者: {{ page.author }}</p>
+  {% endif %}
+  <div class="news-body">
+    <div id="toc" class="news-toc"></div>
+    {{ content }}
+  </div>
+  <div class="news-related">
+    <h2>関連記事</h2>
+    <ul>
+      {% for post in site.news limit:3 %}
+        {% unless post.url == page.url %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+</article>
