@@ -104,17 +104,17 @@
         .navbar-brand {
             font-weight: 700;
             font-size: 1.5rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-color);
             text-decoration: none;
         }
 
         /* Navbar brand positioning override */
         .navbar-brand {
+
             position: absolute;
             left: 1.5rem;
+            top: 0.05rem;
+            
         }
 
         .navbar-nav {
@@ -187,24 +187,7 @@
                 left: 0;
             }
             
-            .navbar-collapse::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5);
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease, visibility 0.3s ease;
-                z-index: -1;
-            }
-            
-            .navbar-collapse.active::before {
-                opacity: 1;
-                visibility: visible;
-            }
+
             
             .navbar-nav {
                 flex-direction: column;
@@ -657,6 +640,8 @@ a:focus {
     .project-card {
         background: linear-gradient(135deg, var(--secondary-bg), #0f0f0f);
     }
+    
+
 }
 
 /* --- Print Styles --- */
