@@ -1,4 +1,6 @@
 ---
+layout: default
+title: News - Lumina Group
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -43,9 +45,9 @@
                 <ul id="news-list">
                     {% for news_item in site.news reversed %}
                     <li class="news-item">
-                        <a href="{{ news_item.url | relative_url }}" class="news-link">
+                        <a href="{{ site.baseurl }}{{ news_item.url }}" class="news-link">
                             {% if news_item.image %}
-                                <img src="{{ news_item.image | relative_url }}" alt="news image" class="news-thumbnail">
+                                <img src="{{ site.baseurl }}{{ news_item.image }}" alt="news image" class="news-thumbnail">
                             {% endif %}
                             <div class="news-info">
                                 <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
