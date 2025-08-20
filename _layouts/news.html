@@ -15,7 +15,7 @@ layout: default
   <div class="news-related">
     <h2>関連記事</h2>
     <ul>
-      {% for post in site.posts limit:3 %}
+      {% for post in site.news limit:3 %}
         {% unless post.url == page.url %}
           <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
         {% endunless %}

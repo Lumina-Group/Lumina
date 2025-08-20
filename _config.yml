@@ -14,3 +14,11 @@ collections:
   news:
     output: true
     permalink: /news/:year-:month-:day-:title/
+    layout: news
+
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
