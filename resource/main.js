@@ -83,6 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');
     });
+    
+    // Ensure buttons are clickable
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            console.log('Button clicked:', button.href);
+        });
+        
+        // Ensure button is not covered by other elements
+        button.style.position = 'relative';
+        button.style.zIndex = '10';
+    });
 });
 
 // Utility function for lazy loading images

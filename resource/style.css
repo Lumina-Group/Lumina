@@ -4,7 +4,7 @@
         :root {
             --bg-color: #ffffff;
             --secondary-bg: #f8fafb;
-            --text-color: #1a1a1a;
+            --text-color: #353333;
             --text-secondary: #6b7280;
             --primary-color: #3b82f6;
             --primary-hover: #2563eb;
@@ -110,7 +110,6 @@
 
         /* Navbar brand positioning override */
         .navbar-brand {
-
             position: absolute;
             left: 1.5rem;
             top: 0.05rem;
@@ -298,11 +297,19 @@
             transition: var(--transition-base);
             border: none;
             cursor: pointer;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
         }
 
         .btn:hover {
             background: var(--primary-hover);
             transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn:active {
+            transform: translateY(0);
         }
 
         /* --- Mission Section --- */
@@ -371,7 +378,6 @@
 
 
         .mission-card h3 {
-            color: var(--primary-color);
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
