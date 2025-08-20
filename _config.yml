@@ -1,3 +1,11 @@
+
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+title: "Lumina"
+baseurl: "" 
+url: "https://lumina-group.github.io/Lumina"
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
