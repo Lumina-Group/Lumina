@@ -9,3 +9,8 @@ url: "https://lumina-group.github.io/Lumina"
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
+
+collections:
+  news:
+    output: true
+    permalink: /news/:year-:month-:day-:title/

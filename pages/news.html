@@ -38,7 +38,21 @@
             <section id="news">
                 <br>
                 <h3>最新のお知らせ / News</h3>
-                <ul id="news-list"></ul>
+                <ul id="news-list">
+                    {% for news_item in site.news reversed %}
+                    <li class="news-item">
+                        <a href="{{ news_item.url | relative_url }}" class="news-link">
+                            {% if news_item.image %}
+                                <img src="{{ news_item.image | relative_url }}" alt="news image" class="news-thumbnail">
+                            {% endif %}
+                            <div class="news-info">
+                                <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
+                                <span class="news-title">{{ news_item.title }}</span>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </section>
             
         </main>
@@ -52,32 +66,5 @@
         </footer>
     </div>
     <script src="../resource/main.js"></script>
-    <script>
-        fetch('../resource/news.json')
-          .then(res => res.json())
-          .then(data => {
-            const ul = document.getElementById('news-list');
-            data.forEach(n => {
-              // 画像のURLを本文から抽出（Markdown形式: ![alt](url)）
-              let imgMatch = n.body.match(/!\[.*?\]\((.*?)\)/);
-              let imgTag = imgMatch ? `<img src="${imgMatch[1]}" alt="news image" class="news-thumbnail">` : '';
-        
-              // リスト項目作成
-              const li = document.createElement('li');
-              li.classList.add('news-item');
-              li.innerHTML = `
-                <a href="${n.url}" class="news-link">
-                  ${imgTag}
-                  <div class="news-info">
-                    <span class="news-date">${n.date}</span>
-                    <span class="news-title">${n.title}</span>
-                  </div>
-                </a>
-              `;
-              ul.appendChild(li);
-            });
-          });
-        </script>
-        
-</body>
+    </body>
 </html>
