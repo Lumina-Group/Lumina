@@ -97,6 +97,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Table of Contents generation for news articles
+window.onload = function() {
+    if (document.querySelector('.news-article')) {
+        const tocContainer = document.getElementById('toc');
+        if (tocContainer) {
+            const contentDiv = document.querySelector('.news-body');
+            const headings = contentDiv.querySelectorAll('h2, h3, h4, h5, h6');
+            
+            if (headings.length > 0) {
+                let tocHtml = '<h3>目次</h3><ul>';
+                headings.forEach((heading, index) => {
+                    const id = 'section-' + index;
+                    heading.setAttribute('id', id);
+                    const level = parseInt(heading.tagName.substring(1));
+                    tocHtml += `<li class="toc-level-${level}"><a href="#${id}">${heading.textContent}</a></li>`;
+                });
+                tocHtml += '</ul>';
+                tocContainer.innerHTML = tocHtml;
+            } else {
+                tocContainer.style.display = 'none'; // Hide if no headings
+            }
+        }
+    }
+};
+
 // Utility function for lazy loading images
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
