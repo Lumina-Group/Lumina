@@ -13,7 +13,7 @@ kramdown:
 collections:
   news:
     output: true
-    permalink: /news/:year-:month-:day-:title/
+    permalink: /news/:name/
     layout: news
 
 defaults:
