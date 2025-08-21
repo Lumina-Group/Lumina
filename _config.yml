@@ -10,4 +10,4 @@ kramdown:
 collections:
   news:
     output: true
-    permalink: /news/:file_id/
+    permalink: /news/:name/
