@@ -884,7 +884,7 @@ body.loaded {
     display: flex;
     align-items: center;
     gap: 1em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5em;
 }
 
@@ -902,13 +902,13 @@ body.loaded {
 
 .news-date {
     font-size: 0.85em;
-    color: #888;
+    color: var(--text-secondary);
 }
 
 .news-title {
     font-weight: bold;
     font-size: 1.1em;
-    color: #333;
+    color: var(--text-color);
 }
 
 /*------------------------------------*
@@ -919,27 +919,27 @@ body.loaded {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .news-article h1 {
-    color: #333;
+    color: var(--text-color);
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .news-date,
 .news-author {
-    color: #777;
+    color: var(--text-secondary);
     font-size: 0.9em;
     display: block;
 }
 
 .news-body {
     line-height: 1.8;
-    color: #555;
+    color: var(--text-secondary);
     font-size: 1.1em;
 }
 
@@ -948,22 +948,22 @@ body.loaded {
 .news-body h4,
 .news-body h5,
 .news-body h6 {
-    color: #444;
+    color: var(--text-color);
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
 .news-toc {
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     padding: 15px;
     margin-bottom: 30px;
-    background-color: #f9f9f9;
+    background-color: var(--secondary-bg);
     border-radius: 5px;
 }
 
 .news-toc h3 {
     margin-top: 0;
-    color: #333;
+    color: var(--text-color);
     font-size: 1.2em;
 }
 
