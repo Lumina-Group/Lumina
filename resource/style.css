@@ -287,29 +287,58 @@
 
         /* --- Buttons --- */
         .btn {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            background: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
             color: white;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.1rem;
             text-decoration: none;
-            border-radius: 8px;
-            transition: var(--transition-base);
+            border-radius: 50px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             cursor: pointer;
             position: relative;
             z-index: 10;
             pointer-events: auto;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            background: var(--primary-hover);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, var(--primary-hover) 0%, #8b5cf6 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
         }
 
         .btn:active {
-            transform: translateY(0);
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover i {
+            transform: translateX(3px);
         }
 
         /* --- Mission Section --- */
@@ -353,6 +382,23 @@
         .mission-title i {
             font-size: 1.2em;
             color: var(--warning-color);
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-text p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .mission-text p:last-child {
+            margin-bottom: 0;
         }
 
         .mission-cards {
@@ -480,8 +526,9 @@
             }
             
             .btn {
-                padding: 0.875rem 2rem;
+                padding: 1rem 2rem;
                 font-size: 1rem;
+                min-height: 48px;
             }
         }
 
@@ -502,6 +549,12 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1.125rem;
+            }
+            
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+                min-height: 44px;
             }
         }
 
