@@ -291,23 +291,24 @@
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-            color: white;
+            background-color: var(--primary-color);
+            color: #fff;
             font-weight: 600;
             font-size: 1.1rem;
             text-decoration: none;
             border-radius: 50px;
-            border: none;
+            border: 1px solid rgba(59, 130, 246, 0.2);
             cursor: pointer;
             position: relative;
             z-index: 10;
             pointer-events: auto;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: var(--transition-base);
         }
 
         .btn:hover {
-            background: linear-gradient(135deg, var(--primary-hover) 0%, #8b5cf6 100%);
-            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+            background-color: var(--primary-hover);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
         }
 
         .btn i {
