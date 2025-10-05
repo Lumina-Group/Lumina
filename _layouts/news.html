@@ -9,4 +9,90 @@ layout: default
     <div id="toc" class="news-toc"></div>
     {{ content }}
   </div>
+  <script>
+    (function () {
+      function toAbsoluteUrl(src) {
+        try {
+          // 絶対URLはそのまま
+          var u = new URL(src, window.location.origin);
+          return u.href;
+        } catch (e) {
+          return src;
+        }
+      }
+
+      function rewriteGithubBlobUrl(src) {
+        try {
+          var url = new URL(src, window.location.origin);
+          if (url.hostname === 'github.com' && url.pathname.includes('/blob/')) {
+            // /{owner}/{repo}/blob/{branch}/{path...}
+            var parts = url.pathname.split('/').filter(Boolean);
+            // parts: [owner, repo, 'blob', branch, ...path]
+            if (parts.length >= 5 && parts[2] === 'blob') {
+              var owner = parts[0];
+              var repo = parts[1];
+              var branch = parts[3];
+              var pathRest = parts.slice(4).join('/');
+              return 'https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + branch + '/' + pathRest;
+            }
+          }
+        } catch (e) {}
+        return src;
+      }
+
+      function ensureBaseUrlForRelative(src) {
+        // 先頭が http(s):, //, data:, blob: のいずれでもない場合は相対とみなす
+        if (/^(https?:)?\/\//i.test(src) || /^(data:|blob:)/i.test(src)) return src;
+        var base = '{{ site.baseurl }}';
+        if (!base) return src;
+        if (src.startsWith('/')) return base + src;
+        // ニュース詳細は /news/... に配置されるため、相対のままでも動くが、明示的に baseurl 付与
+        return base + '/' + src.replace(/^\.?\/?/, '');
+      }
+
+      function attachFallback(img) {
+        if (img.__fallbackBound) return; // 二重登録防止
+        img.__fallbackBound = true;
+        img.addEventListener('error', function onerr() {
+          img.removeEventListener('error', onerr);
+          try {
+            var u = new URL(img.src);
+            // GitHub raw 以外で blob URL のままなら ?raw=1 を試す
+            if (u.hostname === 'github.com' && !u.searchParams.has('raw')) {
+              u.searchParams.set('raw', '1');
+              img.src = u.toString();
+              return;
+            }
+          } catch (e) {}
+        });
+      }
+
+      function processImages() {
+        var container = document.querySelector('.news-body');
+        if (!container) return;
+        var images = container.querySelectorAll('img');
+        images.forEach(function (img) {
+          var original = img.getAttribute('src') || '';
+          if (!original) return;
+
+          var src = original;
+          src = rewriteGithubBlobUrl(src);
+          src = ensureBaseUrlForRelative(src);
+          // 正規化
+          src = toAbsoluteUrl(src);
+
+          if (src !== img.src && src !== original) {
+            img.src = src;
+          }
+          attachFallback(img);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', processImages);
+      } else {
+        processImages();
+      }
+    })();
+  </script>
 </article>
