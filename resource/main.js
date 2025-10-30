@@ -57,10 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add active state to current page nav link
     const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath || 
-            link.getAttribute('href') === currentPath.split('/').pop() ||
-            (currentPath.includes(link.getAttribute('href')) && link.getAttribute('href') !== '../index.html')) {
+        const href = link.getAttribute('href');
+        const linkPage = href.split('/').pop();
+        
+        // Check if link matches current page
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === 'index.html' && (href === 'index.html' || href === '../index.html'))) {
             link.classList.add('active');
         }
     });
@@ -84,16 +90,87 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('loaded');
     });
     
-    // Ensure buttons are clickable
+    // Button ripple effect
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            console.log('Button clicked:', button.href);
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
         });
         
         // Ensure button is not covered by other elements
         button.style.position = 'relative';
         button.style.zIndex = '10';
+        button.style.overflow = 'hidden';
+    });
+
+    // Scroll animations with Intersection Observer
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (!prefersReducedMotion) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Add fade-in class to elements that should animate
+        const elementsToAnimate = document.querySelectorAll(
+            '.mission-card, .project-card, .resource-card, .news-item, .mission-section, section'
+        );
+        
+        elementsToAnimate.forEach((el, index) => {
+            el.classList.add('fade-in');
+            // Stagger animation
+            el.style.transitionDelay = `${index * 0.1}s`;
+            fadeInObserver.observe(el);
+        });
+    }
+
+    // 3D tilt effect for project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        if (prefersReducedMotion) return;
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
     });
 });
 
