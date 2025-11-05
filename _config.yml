@@ -1,9 +1,9 @@
-baseurl: "/Lumina" 
+baseurl: "" 
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 title: "Lumina"
-url: "https://lumina-group.github.io/Lumina"
+url: "https://lumina-group.jp"
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge

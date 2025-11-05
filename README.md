@@ -5,7 +5,7 @@
 ### *自由で安心なデジタル空間を、技術の力で実現する*
 
 [![Join Community](https://img.shields.io/badge/Join-Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/y9TURVfVyb)
-[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.github.io/Lumina/)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lumina-group.jp/)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
 [![Twitter/X](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/group_lumina)
 

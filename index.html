@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://Lumina-Group.github.io/">
+    <link rel="canonical" href="https://lumina-group.jp/">
     
     <!-- Social Meta Tags -->
     <meta property="og:type" content="website">
@@ -16,9 +16,15 @@
     <!-- Twitter Card -->
     <meta name="twitter:title" content="Lumina Development | Digital Privacy & Freedom">
     <meta name="twitter:description" content="Building tools that protect digital rights and enable free expression">
-    <meta name="twitter:image" content="https://github.com/Lumina-Group/Lumina/blob/main/resource/lumina.png?raw=true">
+    <meta name="twitter:image" content="https://lumina-group.jp/resource/lumina.png">
     <title>ホーム - Lumina Group</title>
     <link rel="stylesheet" href="resource/style.css">
+    <!-- ファビコン -->
+    <link rel="icon" type="image/png" href="resource/lumina.png">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -35,6 +41,7 @@
                     <li class="nav-item"><a href="pages/mission.html">使命</a></li>
                     <li class="nav-item"><a href="pages/news.html">お知らせ</a></li>
                     <li class="nav-item"><a href="pages/projects.html">プロジェクト</a></li>
+                    <li class="nav-item"><a href="pages/services.html">サービス・お問い合わせ</a></li>
                     <li class="nav-item"><a href="pages/resources.html">資料室</a></li>
                     <li class="nav-item"><a href="pages/join.html">参加する</a></li>
                 </ul>
@@ -45,19 +52,19 @@
     <div class="container">
         <!-- 1. Hero Section -->
         <header class="hero">
-            <div class="banner" style="text-align:center; margin-bottom: 0;">
-                <h1 class="title"><img src="resource/lumina.png" alt="Decorative image" class="hero-decorative-image"></h1>
-            </div>
-           
-            <div class="subtitle-wrapper">
-                <h1 class="subtitle">自由で安心な空間を<br>技術の力で実現する</h1>
-                
-            </div>
-            <div style="text-align: center; position: relative; z-index: 5;">
-                <a href="https://discord.gg/y9TURVfVyb" class="btn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-discord"></i>
-                    コミュニティに参加する
-                </a>
+            <div class="hero-content">
+                <div class="banner">
+                    <img src="resource/lumina.png" alt="Lumina Logo" class="hero-decorative-image">
+                </div>
+                <div class="subtitle-wrapper">
+                    <h1 class="subtitle">自由で安心な空間を<br>技術の力で実現する</h1>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://discord.gg/y9TURVfVyb" class="btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord"></i>
+                        コミュニティに参加する
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -71,7 +78,75 @@
                 </div>
             </div>
         </section>
+
+        <!-- 3. Services Section -->
+        <section class="services-preview-section">
+            <div class="services-preview-content">
+                <h2 class="section-title">開発案件・サービス提供</h2>
+                <p class="section-intro">プライバシーとセキュリティを重視したソフトウェア開発・技術コンサルティングを提供しています。</p>
+                
+                <div class="services-preview-grid">
+                    <div class="service-preview-card">
+                        <div class="service-preview-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>カスタムソフトウェア開発</h3>
+                        <p>Webアプリケーション、モバイルアプリ、デスクトップアプリケーションの開発を承ります。</p>
+                    </div>
+                    
+                    <div class="service-preview-card">
+                        <div class="service-preview-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>セキュリティ・プライバシー強化</h3>
+                        <p>セキュリティ監査、プライバシー保護設計、暗号化技術の実装をサポートします。</p>
+                    </div>
+                    
+                    <div class="service-preview-card">
+                        <div class="service-preview-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI・機械学習システム開発</h3>
+                        <p>プライバシー保護を考慮したAIシステム、対話支援システムの開発を行います。</p>
+                    </div>
+                </div>
+                
+                <div class="services-cta">
+                    <a href="pages/services.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-right"></i>
+                        サービス詳細を見る
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Lumina</h4>
+                <p>プライバシーとセキュリティを重視した技術コミュニティ</p>
+            </div>
+            <div class="footer-section">
+                <h4>お問い合わせ</h4>
+                <p><a href="mailto:meow_kawaii_jp@proton.me" class="footer-link">meow_kawaii_jp@proton.me</a></p>
+                <p><a href="pages/services.html" class="footer-link">サービス・お問い合わせ</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>リンク</h4>
+                <p><a href="pages/projects.html" class="footer-link">プロジェクト</a></p>
+                <p><a href="pages/news.html" class="footer-link">お知らせ</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; Lumina 2025</p>
+            <div class="social-links">
+                <a href="https://x.com/group_lumina" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.gg/y9TURVfVyb" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://lumina-group.jp" target="_blank" rel="noopener noreferrer" aria-label="Official Website"><i class="fa-solid fa-globe"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="resource/main.js"></script>
 </body>
