@@ -56,17 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     // Add active state to current page nav link
-    const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop() || 'index.html';
+    const normalizePath = (path) => {
+        if (!path) return '/';
+        const withoutTrailingSlash = path.replace(/\/+$/, '');
+        return withoutTrailingSlash === '' ? '/' : withoutTrailingSlash;
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
     
     navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        const linkPage = href.split('/').pop();
+        const linkPath = normalizePath(new URL(link.getAttribute('href'), window.location.origin).pathname);
         
-        // Check if link matches current page
-        if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'index.html') ||
-            (currentPage === 'index.html' && (href === 'index.html' || href === '../index.html'))) {
+        if (linkPath === currentPath) {
             link.classList.add('active');
         }
     });
