@@ -4,7 +4,12 @@ layout: default
 
 <article class="news-article">
   <h2>{{ page.title }}</h2>
-  <p class="news-date">{{ page.date | date: "%Y年%m月%d日" }}</p>
+  <div class="news-meta">
+    <p class="news-date">公開日: {{ page.date | date: "%Y年%m月%d日" }}</p>
+    {% if page.last_modified and page.last_modified != page.date %}
+    <p class="news-last-modified">最終更新: {{ page.last_modified | date: "%Y年%m月%d日" }}</p>
+    {% endif %}
+  </div>
   <div class="news-body">
     <style>
       .news-body img {

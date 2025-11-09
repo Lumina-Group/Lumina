@@ -50,7 +50,14 @@
                                 <img src="{{ news_item.image | relative_url }}" alt="news image" class="news-thumbnail">
                             {% endif %}
                             <div class="news-info">
-                                <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
+                                <div class="news-dates">
+                                    {% if news_item.last_modified and news_item.last_modified != news_item.date %}
+                                    <span class="news-date">公開: {{ news_item.date | date: "%Y年%m月%d日" }}</span>
+                                    <span class="news-last-modified">更新: {{ news_item.last_modified | date: "%Y年%m月%d日" }}</span>
+                                    {% else %}
+                                    <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
+                                    {% endif %}
+                                </div>
                                 <span class="news-title">{{ news_item.title }}</span>
                             </div>
                         </a>
