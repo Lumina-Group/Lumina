@@ -4,6 +4,9 @@ layout: default
 
 <article class="news-article">
   <h2>{{ page.title }}</h2>
+  <div class="news-meta">
+    <span class="news-date">公開日: {{ page.date | date: "%Y年%m月%d日" }}</span>
+  </div>
   <div class="news-body">
     <style>
       .news-body img {

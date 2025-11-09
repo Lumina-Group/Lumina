@@ -60,6 +60,7 @@
                                 <img src="{{ news_item.image | relative_url }}" alt="news image" class="news-thumbnail">
                             {% endif %}
                             <div class="news-info">
+                                <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
                                 <span class="news-title">{{ news_item.title }}</span>
                             </div>
                         </a>

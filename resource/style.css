@@ -286,6 +286,21 @@
             animation: float 20s ease-in-out infinite;
         }
 
+.hero::before,
+.mission-section::before,
+.mission-card::before,
+.project-card::before,
+.services-preview-section::before,
+.service-card::before,
+.resource-card::before,
+.about-info::before,
+.about-values::before,
+.careers-values::before,
+.position-card::before,
+.careers-benefits::before {
+    pointer-events: none;
+}
+
         @keyframes float {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
             33% { transform: translate(30px, -30px) rotate(120deg); }
@@ -1363,6 +1378,10 @@ body.loaded {
         margin-bottom: 0.5em;
     }
 
+    .news-meta {
+        font-size: 0.85em;
+    }
+
     .news-article {
         padding: 15px;
         margin: 20px auto;
@@ -1402,6 +1421,11 @@ body.loaded {
     flex-direction: column;
 }
 
+.news-info .news-date {
+    font-size: 0.85em;
+    color: var(--text-secondary);
+}
+
 .news-title {
     font-weight: bold;
     font-size: 1.1em;
@@ -1432,6 +1456,21 @@ body.loaded {
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 1rem;
     text-align: left;
+}
+
+.news-meta {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.news-meta .news-date {
+    color: #888888;
+    font-size: 0.9em;
+    display: inline-block;
+    margin: 0;
 }
 
 .news-author {
