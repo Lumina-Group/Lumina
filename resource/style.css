@@ -1422,15 +1422,10 @@ body.loaded {
     gap: 0.25em;
 }
 
-.news-date {
+.news-date,
+.news-last-modified {
     font-size: 0.85em;
     color: var(--text-secondary);
-}
-
-.news-last-modified {
-    font-size: 0.8em;
-    color: var(--text-secondary);
-    opacity: 0.8;
 }
 
 .news-title {
@@ -1479,11 +1474,6 @@ body.loaded {
     font-size: 0.9em;
     display: inline-block;
     margin: 0;
-}
-
-.news-meta .news-last-modified {
-    font-size: 0.9em;
-    opacity: 0.85;
 }
 
 .news-author {
