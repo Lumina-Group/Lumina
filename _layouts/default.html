@@ -6,19 +6,34 @@
   <title>{{ page.title }} - Lumina Group</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/resource/style.css">    
   <!-- ファビコン -->
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/resource/lumina.png">
+  <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
   <!-- Canonical URL -->
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}">
+  {% if page.url %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+  {% else %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+  {% endif %}
   
   <!-- Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lumina Development | Digital Privacy & Freedom">
   <meta property="og:description" content="Building tools that protect digital rights and enable free expression">
+  {% if page.url %}
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+  {% else %}
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  {% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
   
   <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lumina Development | Digital Privacy & Freedom">
   <meta name="twitter:description" content="Building tools that protect digital rights and enable free expression">
-  <meta name="twitter:image" content="https://lumina-group.jp/resource/lumina.png">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

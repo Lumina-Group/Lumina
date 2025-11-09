@@ -1380,7 +1380,7 @@ body.loaded {
     }
 
     .news-article h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 
     .news-meta {
@@ -1459,21 +1459,31 @@ body.loaded {
     margin-bottom: 10px;
 }
 
+.news-article h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
 .news-meta {
     margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .news-meta .news-date,
 .news-meta .news-last-modified {
-    color: var(--text-secondary);
+    color: #888888;
     font-size: 0.9em;
-    display: block;
-    margin: 0.25em 0;
+    display: inline-block;
+    margin: 0;
 }
 
 .news-meta .news-last-modified {
-    font-size: 0.85em;
-    opacity: 0.9;
+    font-size: 0.9em;
+    opacity: 0.85;
 }
 
 .news-author {
@@ -1484,7 +1494,7 @@ body.loaded {
 
 .news-body {
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: #555555;
     font-size: 1.1em;
 }
 

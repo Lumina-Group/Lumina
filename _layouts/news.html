@@ -5,9 +5,9 @@ layout: default
 <article class="news-article">
   <h2>{{ page.title }}</h2>
   <div class="news-meta">
-    <p class="news-date">公開日: {{ page.date | date: "%Y年%m月%d日" }}</p>
+    <span class="news-date">公開日: {{ page.date | date: "%Y年%m月%d日" }}</span>
     {% if page.last_modified and page.last_modified != page.date %}
-    <p class="news-last-modified">最終更新: {{ page.last_modified | date: "%Y年%m月%d日" }}</p>
+    <span class="news-last-modified">最終更新: {{ page.last_modified | date: "%Y年%m月%d日" }}</span>
     {% endif %}
   </div>
   <div class="news-body">
