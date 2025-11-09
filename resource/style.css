@@ -122,10 +122,26 @@
             
         }
 
+        .brand-i-dot {
+            position: relative;
+            display: inline-block;
+        }
+
+        .brand-i-dot::before {
+            content: '·';
+            position: absolute;
+            top: 0.1em;
+            left: 48.9%;
+            transform: translateX(-50%);
+            color: #d8b4fe;
+            font-size: 0.8em;
+            line-height: 1;
+        }
+
         .navbar-nav {
             list-style: none;
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 0;
             padding: 0;
             margin-left: auto;
@@ -1145,6 +1161,198 @@ body.loaded {
 @media (max-width: 768px) {
     .resource-card { padding: 1.25rem; }
 }
+
+/* --- About & Careers Pages --- */
+.about-section,
+.careers-section {
+    padding: 4rem 0;
+}
+
+.about-content,
+.careers-content {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.about-info,
+.about-mission,
+.about-values,
+.about-contact,
+.careers-about,
+.careers-values,
+.careers-positions,
+.careers-benefits,
+.careers-apply {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-info::before,
+.about-values::before,
+.careers-values::before,
+.position-card::before,
+.careers-benefits::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(99, 102, 241, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.about-info:hover::before,
+.about-values:hover::before,
+.careers-values:hover::before,
+.position-card:hover::before,
+.careers-benefits:hover::before {
+    opacity: 1;
+}
+
+.info-list,
+.values-list,
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.values-list li,
+.benefits-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.values-list li::before,
+.benefits-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.info-list dt {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.info-list dd {
+    margin: 0 0 1rem 0;
+    color: var(--text-secondary);
+}
+
+.position-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.position-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: none;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.position-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.position-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.position-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.position-card ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.position-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-mission,
+    .about-values,
+    .about-contact {
+        grid-column: 1 / -1;
+    }
+
+    .careers-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .careers-positions,
+    .careers-benefits,
+    .careers-apply {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-info,
+    .about-mission,
+    .about-values,
+    .about-contact,
+    .careers-about,
+    .careers-values,
+    .careers-positions,
+    .careers-benefits,
+    .careers-apply {
+        padding: 2rem 1.5rem;
+    }
+
+    .position-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 #news-list {
     list-style: none;
     padding: 0;
