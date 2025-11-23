@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="resource/lumina.png" alt="Decorative image" class="hero-decorative-image" width="300">
+<img src="resource/images/favicon/lumina.png" alt="Decorative image" class="hero-decorative-image" width="300">
 
 ### *自由で安心なデジタル空間を、技術の力で実現する*
 
