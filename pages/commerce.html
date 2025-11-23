@@ -1,28 +1,16 @@
----
----
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Lumina</title>
+    <title>特定商取引法に基づく表記 - Lumina</title>
     <link rel="stylesheet" href="../resource/style.css">    
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="https://lumina-group.jp/resource/lumina.png">
-    <link rel="shortcut icon" type="image/png" href="https://lumina-group.jp/resource/lumina.png">
-    <link rel="apple-touch-icon" href="https://lumina-group.jp/resource/lumina.png">
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://lumina-group.jp/pages/news.html">
-    <!-- Social Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="News - Lumina">
-    <meta property="og:description" content="Lumina（ルミナ）の最新のお知らせ">
-    <meta property="og:url" content="https://lumina-group.jp/pages/news.html">
-    <meta property="og:image" content="https://lumina-group.jp/resource/lumina.png">
+    <link rel="icon" type="image/png" href="../resource/lumina.png">
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -49,26 +37,57 @@
     </nav>
     <div class="container">
         <main>
-            <section id="news">
-                <br>
-                <h3>最新のお知らせ / News</h3>
-                <ul id="news-list">
-                    {% for news_item in site.news reversed %}
-                    <li class="news-item">
-                        <a href="{{ news_item.url | relative_url }}" class="news-link">
-                            {% if news_item.image %}
-                                <img src="{{ news_item.image | relative_url }}" alt="news image" class="news-thumbnail">
-                            {% endif %}
-                            <div class="news-info">
-                                <span class="news-date">{{ news_item.date | date: "%Y年%m月%d日" }}</span>
-                                <span class="news-title">{{ news_item.title }}</span>
-                            </div>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
+            <section id="commerce" class="about-section">
+                <h3>特定商取引法に基づく表記</h3>
+                
+                <div class="about-content">
+                    <div class="about-info">
+                        <dl class="info-list">
+                            <dt>事業者名</dt>
+                            <dd>Lumina（ルミナ）</dd>
+                            
+                            <dt>代表者名</dt>
+                            <dd>準備中</dd>
+                            
+                            <dt>所在地</dt>
+                            <dd>準備中</dd>
+                            
+                            <dt>電話番号</dt>
+                            <dd>準備中</dd>
+                            
+                            <dt>メールアドレス</dt>
+                            <dd><a href="mailto:me@lumina-group.jp">me@lumina-group.jp</a></dd>
+                            
+                            <dt>販売価格</dt>
+                            <dd>各サービス・商品のページに表示されている価格（税込）に準じます。価格は予告なく変更する場合があります。</dd>
+                            
+                            <dt>支払方法</dt>
+                            <dd>銀行振込、クレジットカード決済（Stripe等の決済代行サービスを利用）等、お客様と協議の上決定いたします。</dd>
+                            
+                            <dt>商品の引き渡し時期</dt>
+                            <dd>サービス内容により異なります。ご契約時に別途ご案内いたします。一般的には、ご契約後、プロジェクトの規模に応じて1週間から数ヶ月程度を想定しております。</dd>
+                            
+                            <dt>返品・交換について</dt>
+                            <dd>ソフトウェア開発サービスは、お客様のご要望に基づくカスタム開発のため、原則として返品・交換はお受けできません。ただし、契約内容と異なる成果物が提供された場合や、明らかな不具合がある場合は、修正対応をいたします。詳細は個別契約にて定めます。</dd>
+                            
+                            <dt>サービス提供の開始時期</dt>
+                            <dd>ご契約成立後、お客様と協議の上、サービス提供開始時期を決定いたします。</dd>
+                            
+                            <dt>その他</dt>
+                            <dd>本サイトを通じたサービス提供については、個別に契約書を交わし、詳細な条件を定めます。お見積もりやご相談は無料で承っております。お気軽にお問い合わせください。</dd>
+                        </dl>
+                    </div>
+                    
+                    <div class="about-contact">
+                        <h3>お問い合わせ</h3>
+                        <p>ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+                        <p><a href="mailto:me@lumina-group.jp" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            メールでお問い合わせ
+                        </a></p>
+                    </div>
+                </div>
             </section>
-            
         </main>
         <footer class="site-footer">
             <div class="footer-content">
@@ -104,5 +123,6 @@
         </footer>
     </div>
     <script src="../resource/main.js"></script>
-    </body>
+</body>
 </html>
+
