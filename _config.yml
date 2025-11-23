@@ -3,6 +3,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 title: "Lumina"
+description: "Lumina（ルミナ）は、プライバシーと表現の自由を守るためのソフトウェアとハードウェアを開発するサイバーセキュリティグループです。"
+keywords: "Lumina, プライバシー, セキュリティ, サイバーセキュリティ, 暗号化, 匿名性, 表現の自由"
 url: "https://lumina-group.jp"
 markdown: kramdown
 kramdown:

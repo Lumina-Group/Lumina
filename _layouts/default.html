@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  {% assign page_title = page.title | default: "Lumina" %}
-  {% assign page_description = page.description | default: "Lumina（ルミナ）は、プライバシーと表現の自由を守るためのソフトウェアとハードウェアを開発するサイバーセキュリティグループです。" %}
-  {% assign page_keywords = page.keywords | default: "Lumina, プライバシー, セキュリティ, サイバーセキュリティ, 暗号化, 匿名性, 表現の自由" %}
-  {% assign og_image = page.og_image | default: site.url | append: site.baseurl | append: "/resource/images/favicon/lumina.png" %}
+
+  {% assign page_title = page.title | default: site.title %}
+  {% assign page_description = page.description | default: site.description %}
+  {% assign page_keywords = page.keywords | default: site.keywords %}
+  {% assign og_image = page.og_image | default: site.url | append: site.baseurl | append:
+  "/resource/images/favicon/lumina.png" %}
   {% assign og_type = page.og_type | default: "website" %}
-  
-  <title>{{ page_title }} - Lumina</title>
+
+  <title>{{ page_title }} - {{ site.title }}</title>
   <meta name="description" content="{{ page_description }}">
   <meta name="keywords" content="{{ page_keywords }}">
-  
-  <link rel="stylesheet" href="{{ site.baseurl }}/resource/css/main.css">    
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/resource/css/main.css">
   <!-- ファビコン -->
   <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
   <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
   <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+
   <!-- Canonical URL -->
   {% if page.url %}
   {% assign canonical_url = page.url | replace: 'index.html', '' %}
@@ -29,10 +33,10 @@
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
   {% endif %}
-  
+
   <!-- Social Meta Tags -->
   <meta property="og:type" content="{{ og_type }}">
-  <meta property="og:title" content="{{ page_title }} - Lumina">
+  <meta property="og:title" content="{{ page_title }} - {{ site.title }}">
   <meta property="og:description" content="{{ page_description }}">
   {% if page.url %}
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ canonical_url }}">
@@ -42,10 +46,10 @@
   <meta property="og:image" content="{{ og_image }}">
   <meta property="og:site_name" content="Lumina">
   <meta property="og:locale" content="ja_JP">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page_title }} - Lumina">
+  <meta name="twitter:title" content="{{ page_title }} - {{ site.title }}">
   <meta name="twitter:description" content="{{ page_description }}">
   <meta name="twitter:image" content="{{ og_image }}">
   <!-- Google Fonts: Inter -->
@@ -53,8 +57,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Structured Data -->
   {% if page.structured_data %}
   <script type="application/ld+json">
@@ -119,7 +125,7 @@
   }
   </script>
   {% endif %}
-  
+
   {% if page.schema_type and page.collection != 'news' %}
   <script type="application/ld+json">
   {
@@ -147,57 +153,61 @@
   </script>
   {% endif %}
 </head>
+
 <body>
   <nav class="navbar">
-      <div class="container">
-          <a href="{{ site.baseurl }}/" class="navbar-brand">Lum<span class="brand-i-dot">ı</span>na</a>
-          <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
-              <i class="fa-solid fa-bars"></i>
-          </button>
-          <div class="navbar-collapse">
-              <ul class="navbar-nav">
-                  <li class="nav-item"><a href="{{ site.baseurl }}/">ホーム</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/mission.html">使命</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/news.html">お知らせ</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/projects.html">プロジェクト</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/services.html">サービス・お問い合わせ</a></li>
-              </ul>
-          </div>
+    <div class="container">
+      <a href="{{ site.baseurl }}/" class="navbar-brand">Lum<span class="brand-i-dot">ı</span>na</a>
+      <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="{{ site.baseurl }}/">ホーム</a></li>
+          <li class="nav-item"><a href="{{ site.baseurl }}/pages/mission.html">使命</a></li>
+          <li class="nav-item"><a href="{{ site.baseurl }}/pages/news.html">お知らせ</a></li>
+          <li class="nav-item"><a href="{{ site.baseurl }}/pages/projects.html">プロジェクト</a></li>
+          <li class="nav-item"><a href="{{ site.baseurl }}/pages/services.html">サービス・お問い合わせ</a></li>
+        </ul>
       </div>
+    </div>
   </nav>
 
   <div class="container">
-  {{ content }}
-  <footer class="site-footer">
+    {{ content }}
+    <footer class="site-footer">
       <div class="footer-content">
-          <div class="footer-section">
-              <h4>Lumina</h4>
-              <p>サイバーセキュリティグループ</p>
-          </div>
-          <div class="footer-section">
-              <h4>情報</h4>
-              <p><a href="{{ site.baseurl }}/pages/about.html" class="footer-link">概要</a></p>
-          </div>
-          <div class="footer-section">
-              <h4>お問い合わせ</h4>
-              <p><a href="mailto:me@lumina-group.jp" class="footer-link">me@lumina-group.jp</a></p>
-              <p><a href="{{ site.baseurl }}/pages/services.html" class="footer-link">サービス・お問い合わせ</a></p>
-          </div>
-          <div class="footer-section">
-              <h4>リンク</h4>
-              <p><a href="{{ site.baseurl }}/pages/projects.html" class="footer-link">プロジェクト</a></p>
-              <p><a href="{{ site.baseurl }}/pages/news.html" class="footer-link">お知らせ</a></p>
-          </div>
+        <div class="footer-section">
+          <h4>Lumina</h4>
+          <p>サイバーセキュリティグループ</p>
+        </div>
+        <div class="footer-section">
+          <h4>情報</h4>
+          <p><a href="{{ site.baseurl }}/pages/about.html" class="footer-link">概要</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>お問い合わせ</h4>
+          <p><a href="mailto:me@lumina-group.jp" class="footer-link">me@lumina-group.jp</a></p>
+          <p><a href="{{ site.baseurl }}/pages/services.html" class="footer-link">サービス・お問い合わせ</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>リンク</h4>
+          <p><a href="{{ site.baseurl }}/pages/projects.html" class="footer-link">プロジェクト</a></p>
+          <p><a href="{{ site.baseurl }}/pages/news.html" class="footer-link">お知らせ</a></p>
+        </div>
       </div>
       <div class="footer-bottom">
-          <p>Copyright &copy; Lumina 2025</p>
-          <div class="social-links">
-              <a href="https://x.com/group_lumina" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://github.com/lumina-group" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a href="https://lumina-group.jp" target="_blank" rel="noopener noreferrer" aria-label="Official Website"><i class="fa-solid fa-globe"></i></a>
-          </div>
+        <p>Copyright &copy; Lumina 2025</p>
+        <div class="social-links">
+          <a href="https://x.com/group_lumina" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/lumina-group" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://lumina-group.jp" target="_blank" rel="noopener noreferrer" aria-label="Official Website"><i
+              class="fa-solid fa-globe"></i></a>
+        </div>
       </div>
-  </footer>
+    </footer>
 
   </div>
 
@@ -205,4 +215,5 @@
   <script type="module" src="{{ site.baseurl }}/resource/js/main.js"></script>
 
 </body>
+
 </html>
