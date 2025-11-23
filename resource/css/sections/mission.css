@@ -1,0 +1,59 @@
+/**
+ * Mission Section
+ * ミッションセクションのスタイル
+ */
+
+.mission-section {
+    background: var(--bg-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 4rem 2rem;
+    margin: 4rem auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.mission-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.mission-title i {
+    font-size: 1.2em;
+    color: var(--warning-color);
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.mission-text p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+

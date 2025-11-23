@@ -3,43 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - Lumina</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/resource/style.css">    
+  
+  {% assign page_title = page.title | default: "Lumina" %}
+  {% assign page_description = page.description | default: "Lumina（ルミナ）は、プライバシーと表現の自由を守るためのソフトウェアとハードウェアを開発するサイバーセキュリティグループです。" %}
+  {% assign page_keywords = page.keywords | default: "Lumina, プライバシー, セキュリティ, サイバーセキュリティ, 暗号化, 匿名性, 表現の自由" %}
+  {% assign og_image = page.og_image | default: site.url | append: site.baseurl | append: "/resource/images/favicon/lumina.png" %}
+  {% assign og_type = page.og_type | default: "website" %}
+  
+  <title>{{ page_title }} - Lumina</title>
+  <meta name="description" content="{{ page_description }}">
+  <meta name="keywords" content="{{ page_keywords }}">
+  
+  <link rel="stylesheet" href="{{ site.baseurl }}/resource/css/main.css">    
   <!-- ファビコン -->
-  <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
-  <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
-  <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  
   <!-- Canonical URL -->
   {% if page.url %}
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+  {% assign canonical_url = page.url | replace: 'index.html', '' %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ canonical_url }}">
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
   {% endif %}
   
   <!-- Social Meta Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Lumina Development | Digital Privacy & Freedom">
-  <meta property="og:description" content="Building tools that protect digital rights and enable free expression">
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:title" content="{{ page_title }} - Lumina">
+  <meta property="og:description" content="{{ page_description }}">
   {% if page.url %}
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ canonical_url }}">
   {% else %}
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
   {% endif %}
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:site_name" content="Lumina">
+  <meta property="og:locale" content="ja_JP">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lumina Development | Digital Privacy & Freedom">
-  <meta name="twitter:description" content="Building tools that protect digital rights and enable free expression">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/resource/lumina.png">
+  <meta name="twitter:title" content="{{ page_title }} - Lumina">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Structured Data -->
+  {% if page.structured_data %}
+  <script type="application/ld+json">
+  {{ page.structured_data | jsonify }}
+  </script>
+  {% elsif page.collection == 'news' %}
+  <!-- Article structured data for news items -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ page_title }}",
+    "description": "{{ page_description }}",
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+    "dateModified": "{{ page.date | date: '%Y-%m-%d' }}",
+    "url": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+    "author": {
+      "@type": "Organization",
+      "name": "Lumina"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lumina",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png",
+    "description": "{{ page_description }}",
+    "sameAs": [
+      "https://x.com/group_lumina",
+      "https://github.com/lumina-group"
+    ]
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lumina",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png",
+    "description": "{{ page_description }}",
+    "sameAs": [
+      "https://x.com/group_lumina",
+      "https://github.com/lumina-group"
+    ]
+  }
+  </script>
+  {% endif %}
+  
+  {% if page.schema_type and page.collection != 'news' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{{ page.schema_type }}",
+    "name": "{{ page_title }}",
+    "description": "{{ page_description }}",
+    "url": "{{ site.url }}{{ site.baseurl }}{{ canonical_url }}",
+    {% if page.schema_type == "WebPage" %}
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Lumina",
+      "url": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {% endif %}
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png"
+      }
+    }
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
   <nav class="navbar">
@@ -55,9 +161,6 @@
                   <li class="nav-item"><a href="{{ site.baseurl }}/pages/news.html">お知らせ</a></li>
                   <li class="nav-item"><a href="{{ site.baseurl }}/pages/projects.html">プロジェクト</a></li>
                   <li class="nav-item"><a href="{{ site.baseurl }}/pages/services.html">サービス・お問い合わせ</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/about.html">概要</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/careers.html">採用情報</a></li>
-                  <li class="nav-item"><a href="{{ site.baseurl }}/pages/resources.html">資料室</a></li>
               </ul>
           </div>
       </div>
@@ -69,12 +172,11 @@
       <div class="footer-content">
           <div class="footer-section">
               <h4>Lumina</h4>
-              <p>プライバシーとセキュリティを重視したサイバーセキュリティグループ</p>
+              <p>サイバーセキュリティグループ</p>
           </div>
           <div class="footer-section">
               <h4>情報</h4>
               <p><a href="{{ site.baseurl }}/pages/about.html" class="footer-link">概要</a></p>
-              <p><a href="{{ site.baseurl }}/pages/careers.html" class="footer-link">採用情報</a></p>
           </div>
           <div class="footer-section">
               <h4>お問い合わせ</h4>
@@ -100,7 +202,7 @@
   </div>
 
   <!-- Main JavaScript -->
-  <script src="{{ site.baseurl }}/resource/main.js"></script>
+  <script type="module" src="{{ site.baseurl }}/resource/js/main.js"></script>
 
 </body>
 </html>

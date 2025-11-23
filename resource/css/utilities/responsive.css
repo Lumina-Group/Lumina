@@ -1,0 +1,254 @@
+/**
+ * Responsive Design
+ * レスポンシブデザインのメディアクエリを統合
+ */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero .hero-decorative-image {
+        max-width: 280px;
+        width: 90%;
+    }
+
+    .hero .banner {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .subtitle-wrapper {
+        margin: 1.5rem 0 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.5;
+    }
+
+    .hero-cta {
+        margin-top: 1rem;
+    }
+
+    /* Mission Section */
+    .mission-section {
+        padding: 3rem 1.5rem;
+        margin: 3rem 1rem;
+    }
+
+    .mission-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        min-height: 48px;
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Typography */
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Sections */
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Cards */
+    .mission-card,
+    .project-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .resource-card {
+        padding: 1.25rem;
+    }
+
+    /* About & Careers */
+    .careers-about,
+    .careers-values,
+    .careers-positions,
+    .careers-benefits,
+    .careers-apply {
+        padding: 2rem 1.5rem;
+    }
+
+    .position-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* News */
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-thumbnail {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 0.5em;
+    }
+
+    .news-meta {
+        font-size: 0.85em;
+    }
+
+    .news-article {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .news-article h2 {
+        font-size: 1.5em;
+    }
+
+    /* Services */
+    .services-section,
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .services-grid,
+    .contact-grid,
+    .services-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card,
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .services-preview-section {
+        padding: 3rem 1.5rem;
+        margin: 3rem 1rem;
+    }
+
+    .contact-info {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .hero .hero-decorative-image {
+        max-width: 240px;
+        width: 85%;
+    }
+
+    .hero .banner {
+        margin-bottom: 1rem;
+    }
+
+    .hero .subtitle-wrapper {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: clamp(1.25rem, 7vw, 1.75rem);
+    }
+
+    .mission-section {
+        padding: 2rem 1rem;
+        margin: 2rem 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 44px;
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .service-card,
+    .contact-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-icon,
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Desktop (992px and above) */
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-mission,
+    .about-values,
+    .about-contact {
+        grid-column: 1 / -1;
+    }
+
+    .careers-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .careers-positions,
+    .careers-benefits,
+    .careers-apply {
+        grid-column: 1 / -1;
+    }
+}
+

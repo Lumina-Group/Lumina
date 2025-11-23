@@ -1,0 +1,247 @@
+/**
+ * Commerce Disclosure Page
+ * 特定商取引法に基づく表記ページのスタイル
+ */
+
+.commerce-section {
+    padding: 4rem 0;
+}
+
+.commerce-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.commerce-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.commerce-content {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.commerce-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+}
+
+.commerce-groups {
+    display: grid;
+    gap: 2rem;
+}
+
+.commerce-group {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+}
+
+.commerce-group:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.commerce-group-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.commerce-group-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.commerce-group h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.commerce-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.commerce-info-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: var(--secondary-bg);
+    border-radius: 10px;
+    transition: var(--transition-base);
+    border: 1px solid transparent;
+}
+
+.commerce-info-item:hover {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.commerce-info-item dt {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.commerce-info-item dt::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.commerce-info-item dd {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.9375rem;
+}
+
+.commerce-info-item dd a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+    font-weight: 500;
+}
+
+.commerce-info-item dd a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.commerce-contact {
+    background: var(--primary-color);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: var(--shadow-lg);
+}
+
+.commerce-contact h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.commerce-contact h3::after {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.commerce-contact p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.commerce-contact .btn {
+    background: #fff;
+    color: var(--primary-color);
+    border: none;
+    font-weight: 600;
+}
+
+.commerce-contact .btn:hover {
+    background: var(--secondary-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commerce-section {
+        padding: 2.5rem 0;
+    }
+
+    .commerce-section h3 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .commerce-group {
+        padding: 1.75rem;
+    }
+
+    .commerce-group-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .commerce-group-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .commerce-group h4 {
+        font-size: 1.25rem;
+    }
+
+    .commerce-info-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .commerce-info-item dt {
+        font-size: 0.9375rem;
+    }
+
+    .commerce-info-item dd {
+        font-size: 0.875rem;
+    }
+
+    .commerce-contact {
+        padding: 2rem 1.5rem;
+    }
+
+    .commerce-contact h3 {
+        font-size: 1.5rem;
+    }
+}
+

@@ -1,0 +1,24 @@
+/**
+ * CSS Variables
+ * サイト全体で使用するCSS変数を定義
+ */
+
+:root {
+    --bg-color: #ffffff;
+    --secondary-bg: #fafafa;
+    --text-color: #1a1a1a;
+    --text-secondary: #6b6b6b;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-color: #6366f1;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --border-color: #e8e8e8;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --container-width: 1200px;
+    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,54 @@
+/**
+ * Hero Section
+ * ヒーローセクションのスタイル
+ */
+
+.hero {
+    padding: 5rem 0;
+    background: var(--secondary-bg);
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .banner {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .hero-decorative-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero .subtitle-wrapper {
+    text-align: center;
+    margin: 2rem 0 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .subtitle {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--text-color);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.hero-cta {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}

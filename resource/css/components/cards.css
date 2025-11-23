@@ -1,0 +1,242 @@
+/**
+ * Cards Component
+ * カードコンポーネントの共通スタイル
+ */
+
+.mission-card,
+.project-card,
+.resource-card,
+.service-card,
+.service-preview-card,
+.contact-card,
+.position-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: none;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.mission-card:hover,
+.project-card:hover,
+.resource-card:hover,
+.service-card:hover,
+.service-preview-card:hover,
+.contact-card:hover,
+.position-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+/* Mission Card */
+.mission-card {
+    text-align: center;
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+    margin-bottom: 0;
+}
+
+/* Project Card */
+.project-logo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Resource Card */
+.resource-card {
+    padding: 1.75rem;
+}
+
+.resource-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.resource-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.resource-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.resource-icon i {
+    font-size: 1.1rem;
+}
+
+.card-actions {
+    margin-top: 1rem;
+}
+
+/* Service Card */
+.service-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Service Preview Card */
+.service-preview-card {
+    text-align: center;
+}
+
+.service-preview-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.service-preview-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.service-preview-card p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Contact Card */
+.contact-card {
+    text-align: center;
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Position Card */
+.position-card {
+    border-radius: 14px;
+    padding: 2rem;
+}
+
+.position-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.position-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.position-card ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.position-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
