@@ -1,0 +1,29 @@
+---
+layout: default_en
+title_en: "News"
+description_en: "Latest announcements and news from Lumina. Get the latest information on project progress, service updates, and preparations for incorporation."
+keywords_en: "Lumina, news, announcements, projects, incorporation, service information"
+---
+
+<main>
+    <section id="news">
+        <br>
+        <h3>Latest News</h3>
+        <ul id="news-list">
+            {% for news_item in site.news reversed %}
+            <li class="news-item">
+                <a href="{{ news_item.url | prepend: '/en' | relative_url }}" class="news-link">
+                    {% if news_item.image %}
+                    <img src="{{ news_item.image | relative_url }}" alt="{{ news_item.title }} - Lumina News"
+                        class="news-thumbnail">
+                    {% endif %}
+                    <div class="news-info">
+                        <span class="news-date">{{ news_item.date | date: "%Y-%m-%d" }}</span>
+                        <span class="news-title">{{ news_item.title_en | default: news_item.title }}</span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
