@@ -13,3 +13,8 @@ collections:
   news:
     output: true
     permalink: /news/:name/
+
+en:
+  title: "Lumina"
+  description: "Lumina is a cybersecurity group that develops software and hardware to protect privacy and freedom of expression."
+  keywords: "Lumina, privacy, security, cybersecurity, encryption, anonymity, freedom of expression"
