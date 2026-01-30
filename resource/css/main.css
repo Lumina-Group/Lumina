@@ -25,6 +25,7 @@
 @import url('sections/services.css');
 @import url('sections/about.css');
 @import url('sections/commerce.css');
+@import url('sections/pricing.css');
 
 /* Utilities */
 @import url('utilities/responsive.css');

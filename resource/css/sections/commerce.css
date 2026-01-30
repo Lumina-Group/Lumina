@@ -245,3 +245,48 @@
     }
 }
 
+/* Terms of Service (利用規約) */
+.terms-section .terms-body {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.85;
+    margin: 0;
+}
+
+.terms-section .terms-body p {
+    margin-bottom: 1rem;
+}
+
+.terms-section .terms-body p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section .terms-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 1.25rem;
+}
+
+.terms-section .terms-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+}
+
+.terms-section .terms-list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.terms-section .terms-updated {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    opacity: 0.9;
+}
+

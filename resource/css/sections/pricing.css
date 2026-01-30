@@ -1,0 +1,49 @@
+/**
+ * Pricing Section
+ * Stripe Pricing Table 用のセクションスタイル
+ */
+
+.pricing-section {
+    padding: 4rem 0;
+}
+
+.pricing-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.pricing-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.pricing-section .section-intro {
+    margin-bottom: 2rem;
+}
+
+.stripe-pricing-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 2.5rem 0;
+    }
+
+    .pricing-section h3 {
+        font-size: 1.75rem;
+    }
+}
