@@ -47,7 +47,19 @@
     line-height: 1.4;
 }
 
+.hero-tagline {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin: 0 0 1.5rem;
+    max-width: 480px;
+    line-height: 1.6;
+}
+
 .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     text-align: center;
     position: relative;
     z-index: 5;

@@ -42,3 +42,8 @@
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+.btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
