@@ -3,78 +3,142 @@
  * コンセプト・編集風レイアウト
  */
 
+/* Page background: off-white editorial feel */
+.sounds-page {
+    background-color: #f6f5f3;
+}
+
+.sounds-page .container {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 900px) {
+    .sounds-page .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
 /* Concept block */
 .sounds-concept {
-    padding: 4rem 0 5rem;
-    max-width: 720px;
+    padding: 4.5rem 0 5rem;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .sounds-concept .sounds-title {
-    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15em;
+    margin-bottom: 3rem;
     text-align: center;
+}
+
+.sounds-concept .sounds-title-brand {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    color: var(--text-color);
+}
+
+.sounds-concept .sounds-title-cat {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--text-color);
 }
 
 .sounds-concept .concept-text {
     font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
-    font-size: 1rem;
-    line-height: 2.2;
+    font-size: 0.9375rem;
+    line-height: 2.4;
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 
 .sounds-concept .concept-text-en {
-    font-size: 0.9375rem;
-    line-height: 2;
+    font-size: 0.8125rem;
+    line-height: 2.2;
     color: var(--text-secondary);
     margin-bottom: 0;
+    font-style: normal;
 }
 
-/* Section label (RECORD / LUMINA SOUNDS / NO. style) */
+/* Hero CTA */
+.sounds-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+}
+
+.sounds-hero-cta .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Section label row (RECORD / ZUTOMAYO / NO. style) */
 .sounds-section-label {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 1rem 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border-color);
+    gap: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .sounds-section-label .label-cat {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--text-secondary);
 }
 
 .sounds-section-label .label-brand {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.2em;
     color: var(--text-color);
 }
 
 .sounds-section-label .label-no {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     color: var(--text-secondary);
     margin-left: auto;
 }
 
-/* Products section in sounds style */
+.sounds-section-date {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+}
+
+/* Section content */
 .sounds-section {
-    padding: 3rem 0 4rem;
+    padding: 3.5rem 0 4.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.sounds-section:first-of-type {
+    border-top: none;
 }
 
 .sounds-section .section-heading {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 1.5rem;
@@ -86,14 +150,14 @@
     margin: 0 auto;
 }
 
-/* Contact in sounds style */
+/* Contact */
 .sounds-contact {
-    padding: 3rem 0 4rem;
+    padding: 3.5rem 0 4.5rem;
     border-top: 1px solid var(--border-color);
 }
 
 .sounds-contact .section-heading {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 1.5rem;
@@ -107,34 +171,32 @@
     gap: 1rem;
 }
 
-/* Hero CTA under concept */
-.sounds-hero-cta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2.5rem;
-}
-
-.sounds-hero-cta .btn {
-    font-size: 0.875rem;
-    padding: 0.625rem 1.25rem;
-    letter-spacing: 0.05em;
+.sounds-page .site-footer {
+    background-color: #f6f5f3;
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {
     .sounds-concept {
-        padding: 2.5rem 1rem 3.5rem;
+        padding: 2.5rem 0 3.5rem;
     }
 
-    .sounds-concept .concept-text,
+    .sounds-concept .sounds-title {
+        margin-bottom: 2rem;
+    }
+
+    .sounds-concept .concept-text {
+        font-size: 0.875rem;
+        line-height: 2.2;
+    }
+
     .sounds-concept .concept-text-en {
-        font-size: 0.9375rem;
+        font-size: 0.75rem;
         line-height: 2;
     }
 
     .sounds-section-label {
-        gap: 0.5rem 1rem;
+        gap: 0.25rem 1rem;
     }
 
     .sounds-section-label .label-no {
@@ -142,7 +204,8 @@
         width: 100%;
     }
 
-    .sounds-section {
-        padding: 2rem 0 3rem;
+    .sounds-section,
+    .sounds-contact {
+        padding: 2.5rem 0 3rem;
     }
 }
