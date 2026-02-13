@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="https://lumina-group.jp/resource/images/favicon/lumina.png">
 
     <link rel="stylesheet" href="/resource/css/main.css">
-    <link rel="stylesheet" href="/music/sounds.css">
+    <link rel="stylesheet" href="/music/redesign.css">
     <link rel="icon" type="image/png" href="https://lumina-group.jp/resource/images/favicon/lumina.png">
     <!-- Google Fonts: Inter, Shippori Mincho (Lumina Sounds) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,16 +68,17 @@
 </head>
 
 <body class="sounds-page">
-    <nav class="navbar">
+    <nav class="navbar ls-navbar">
         <div class="container">
-            <a href="/music/" class="navbar-brand">Lum<span class="brand-i-dot">ı</span>na</a>
+            <a href="/music/" class="navbar-brand ls-serif">LUMINA SOUNDS</a>
+            <div class="ls-meta nav-label">EST. 2025 / TOKYO</div>
             <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a href="/music/">TOP</a></li>
-                    <li class="nav-item"><a href="/music/#pricing">PRODUCTS</a></li>
+                    <li class="nav-item"><a href="/music/#products">PRODUCTS</a></li>
                     <li class="nav-item"><a href="/music/#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -85,33 +86,92 @@
     </nav>
 
     <div class="container">
-        <header class="sounds-concept">
-            <h1 class="sounds-title">
-                <span class="sounds-title-brand">LUMINA</span>
-                <span class="sounds-title-cat">SOUNDS</span>
+        <header class="ls-hero" data-ls-reveal>
+            <div class="ls-hero-labels">
+                <span class="ls-meta">BRAND/SOUNDS</span>
+                <span class="ls-meta">LUMINA-000</span>
+            </div>
+
+            <h1 class="ls-hero-title ls-serif">
+                <span class="title-main">LUMINA</span>
+                <span class="title-sub">SOUNDS</span>
             </h1>
 
-            <div class="sounds-hero-cta">
-                <a href="/music/#pricing" class="btn btn-outline">
-                    <i class="fas fa-box"></i>
-                    商品
-                </a>
-                <a href="/music/#contact" class="btn">
-                    <i class="fa-solid fa-envelope"></i>
-                    お問い合わせ
-                </a>
+            <div class="ls-hero-concept">
+                <p class="concept-jp ls-serif">
+                    デジタルとフィジカルの境界が曖昧になった今、私たちは音の肌触りを追求します。<br>
+                    人間らしい響き、繋がる質感。Lumina Soundsは、静寂を設計し、雑音を紡ぎ、<br>
+                    すべての振動を通じて表現の自由を守り続けます。
+                </p>
+                <p class="concept-en">
+                    In an era where the digital and physical blur, we pursue the texture of sound—the raw, human resonance that connects us. Lumina Sounds: Engineering silence, crafting noise, preserving the freedom of expression through every vibration.
+                </p>
+            </div>
+
+            <div class="ls-hero-cta">
+                <a href="#products" class="ls-btn">Explore Sounds</a>
             </div>
         </header>
 
-        <section id="pricing" class="sounds-section pricing-section">
-            <div class="sounds-section-label">
-                <span class="label-cat">Products</span>
-                <span class="label-brand">LUMINA</span>
-                <span class="label-no">NO.</span>
+        <section id="products" class="ls-section" data-ls-reveal>
+            <div class="ls-section-header">
+                <div class="ls-meta">COLLECTION / 2025</div>
+                <h2 class="ls-serif section-title">PRODUCTS</h2>
             </div>
-            <p class="sounds-section-date">DATE :</p>
-            <h2 class="section-heading">商品</h2>
-            <div class="stripe-pricing-wrapper">
+
+            <div class="ls-grid">
+                <!-- Product 1 -->
+                <article class="ls-card">
+                    <div class="ls-card-meta">
+                        <span class="ls-meta">EQUIPMENT</span>
+                        <span class="ls-meta">LMN-001</span>
+                    </div>
+                    <div class="ls-card-image">
+                        <div class="image-placeholder">LMN-01</div>
+                    </div>
+                    <div class="ls-card-content">
+                        <h3 class="ls-serif">Transcendent Studio Headphones</h3>
+                        <p class="ls-price">¥38,500 <span class="ls-meta">TAX INCL.</span></p>
+                        <a href="#" class="ls-btn btn-buy">Purchase</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="ls-card">
+                    <div class="ls-card-meta">
+                        <span class="ls-meta">ANALOG</span>
+                        <span class="ls-meta">LMN-002</span>
+                    </div>
+                    <div class="ls-card-image">
+                        <div class="image-placeholder">LMN-02</div>
+                    </div>
+                    <div class="ls-card-content">
+                        <h3 class="ls-serif">Digital Silence Vinyl</h3>
+                        <p class="ls-price">¥4,950 <span class="ls-meta">TAX INCL.</span></p>
+                        <a href="#" class="ls-btn btn-buy">Purchase</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="ls-card">
+                    <div class="ls-card-meta">
+                        <span class="ls-meta">MEDIA</span>
+                        <span class="ls-meta">LMN-003</span>
+                    </div>
+                    <div class="ls-card-image">
+                        <div class="image-placeholder">LMN-03</div>
+                    </div>
+                    <div class="ls-card-content">
+                        <h3 class="ls-serif">Lumina Archive Cassette</h3>
+                        <p class="ls-price">¥2,200 <span class="ls-meta">TAX INCL.</span></p>
+                        <a href="#" class="ls-btn btn-buy">Purchase</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Stripe Integration (Functional Fallback) -->
+            <div class="ls-stripe-checkout" data-ls-reveal>
+                <div class="ls-meta checkout-label">SECURE CHECKOUT / STRIPE</div>
                 <stripe-pricing-table
                     pricing-table-id="prctbl_1SvHPMLxWtXgNN5XQ3XDQJHr"
                     publishable-key="pk_live_51SUvK7LxWtXgNN5XkLuOdZndUtS6jR7mVc9yPC6Y5quOl9cJul8rVGvFICXmMyCbBRR1a7ESlsV4sBV1qaUaLnXF009syYepkp">
@@ -119,45 +179,55 @@
             </div>
         </section>
 
-        <section id="contact" class="sounds-contact contact-section">
-            <div class="sounds-section-label">
-                <span class="label-cat">Contact</span>
-                <span class="label-brand">LUMINA</span>
-                <span class="label-no">NO.</span>
+        <section id="contact" class="ls-section ls-contact" data-ls-reveal>
+            <div class="ls-section-header">
+                <div class="ls-meta">PROTOCOL / INQUIRY</div>
+                <h2 class="ls-serif section-title">CONTACT</h2>
             </div>
-            <p class="sounds-section-date">DATE :</p>
-            <h2 class="section-heading">お問い合わせ</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <a href="mailto:me@lumina-group.jp" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i>
-                        メール
-                    </a>
+            <div class="ls-contact-content">
+                <p class="concept-jp ls-serif">
+                    製品に関するお問い合わせ、コラボレーションのご提案はこちらから。<br>
+                    新しい響きを共に創り出すパートナーを常に探しています。
+                </p>
+                <div class="ls-contact-actions">
+                    <a href="mailto:me@lumina-group.jp" class="ls-btn">Send Transmission</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer class="site-footer">
-        <div class="footer-bottom">
-            <p><a href="mailto:me@lumina-group.jp" class="footer-link">me@lumina-group.jp</a></p>
-            <p><a href="/music/pages/commerce.html" class="footer-link">特定商取引法に基づく表記</a></p>
-            <p><a href="/music/pages/terms.html" class="footer-link">利用規約</a></p>
-            <div class="social-links">
-                <a href="https://x.com/group_lumina" target="_blank" rel="noopener noreferrer"
-                    aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://github.com/lumina-group" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://lumina-group.jp" target="_blank" rel="noopener noreferrer"
-                    aria-label="Official Website"><i class="fa-solid fa-globe"></i></a>
+    <footer class="ls-footer" data-ls-reveal>
+        <div class="container">
+            <div class="ls-footer-grid">
+                <div class="ls-footer-brand">
+                    <div class="ls-meta">SYSTEM-77 / LUMINA SOUNDS</div>
+                    <h3 class="ls-serif">LUMINA</h3>
+                </div>
+                <div class="ls-footer-links">
+                    <div class="ls-meta">DIRECTORY</div>
+                    <ul>
+                        <li><a href="/music/pages/commerce.html">Legal / 特定商取引法</a></li>
+                        <li><a href="/music/pages/terms.html">Terms / 利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="ls-footer-social">
+                    <div class="ls-meta">SOCIAL CONNECT</div>
+                    <div class="social-links">
+                        <a href="https://x.com/group_lumina" target="_blank" rel="noopener noreferrer">X</a>
+                        <a href="https://github.com/lumina-group" target="_blank" rel="noopener noreferrer">GH</a>
+                        <a href="https://lumina-group.jp" target="_blank" rel="noopener noreferrer">WEB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ls-footer-bottom">
+                <div class="ls-meta">© 2025 LUMINA GROUP. ALL RIGHTS RESERVED.</div>
+                <div class="ls-meta">ENCRYPTED RESISTANCE / SOUND ARCHIVE</div>
             </div>
         </div>
     </footer>
 
     <script type="module" src="/resource/js/main.js"></script>
+    <script src="/music/interaction.js"></script>
 </body>
 
 </html>
