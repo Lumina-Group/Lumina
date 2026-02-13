@@ -1,0 +1,22 @@
+---
+layout: default_en
+---
+
+<article class="news-article">
+  <h2>{{ page.title_en }}</h2>
+  <div class="news-meta">
+    <span class="news-date">Published on: {{ page.date | date: "%B %d, %Y" }}</span>
+  </div>
+  <div class="news-body">
+    <style>
+      .news-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+      }
+    </style>
+    <div id="toc" class="news-toc"></div>
+    {{ content }}
+  </div>
+</article>
