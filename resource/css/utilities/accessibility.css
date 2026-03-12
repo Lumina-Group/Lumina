@@ -42,30 +42,6 @@ a:focus {
     }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #0a0a0a;
-        --secondary-bg: #1a1a1a;
-        --text-color: #ffffff;
-        --text-secondary: #a1a1aa;
-        --border-color: #27272a;
-    }
-
-    .navbar {
-        background-color: rgba(10, 10, 10, 0.8);
-    }
-
-    .navbar.scrolled {
-        background-color: rgba(10, 10, 10, 0.95);
-    }
-
-    .mission-card,
-    .project-card {
-        background: var(--secondary-bg);
-    }
-}
-
 /* Print Styles */
 @media print {
     .navbar,
