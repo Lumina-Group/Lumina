@@ -1,1 +1,3 @@
 _lumina_news_updater/
+output/playwright/
+.playwright-cli/

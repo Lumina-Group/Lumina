@@ -4,11 +4,12 @@
  */
 
 :root {
-    --ls-bg: #f6f5f3;
+    --ls-bg: #f4f6f7;
     --ls-text: #1a1a1a;
-    --ls-text-meta: #6b6b6b;
-    --ls-accent: #2563eb;
+    --ls-text-meta: #5c6670;
+    --ls-accent: #0f766e;
     --ls-border: rgba(0, 0, 0, 0.08);
+    --ls-panel: #e7ecef;
     --ls-serif: "Shippori Mincho B1", "Noto Serif JP", serif;
     --ls-sans: "Inter", "Noto Sans JP", sans-serif;
     --ls-transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -191,7 +192,11 @@
 
 .ls-card-image {
     aspect-ratio: 1 / 1;
-    background-color: #eee;
+    background:
+        linear-gradient(90deg, rgba(26, 26, 26, 0.08) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(26, 26, 26, 0.08) 1px, transparent 1px),
+        var(--ls-panel);
+    background-size: 32px 32px;
     margin-bottom: 1.5rem;
     overflow: hidden;
     display: flex;
@@ -221,14 +226,17 @@
 .image-placeholder {
     font-family: var(--ls-serif);
     font-size: 2rem;
-    opacity: 0.2;
+    opacity: 0.34;
     letter-spacing: 0.2em;
     transition: var(--ls-transition);
+    border: 1px solid rgba(26, 26, 26, 0.18);
+    padding: 1.5rem 1.75rem;
+    background: rgba(244, 246, 247, 0.72);
 }
 
 .ls-card:hover .image-placeholder {
     transform: scale(1.1);
-    opacity: 0.4;
+    opacity: 0.54;
 }
 
 .ls-card:hover .ls-card-meta {
@@ -239,6 +247,13 @@
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     line-height: 1.3;
+}
+
+.ls-card-copy {
+    font-size: 0.8125rem;
+    line-height: 1.9;
+    color: var(--ls-text-meta);
+    margin-bottom: 1.25rem;
 }
 
 .ls-price {
@@ -261,6 +276,18 @@
 .checkout-label {
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.ls-note {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ls-note .concept-jp {
+    line-height: 2;
+    margin-bottom: 0;
 }
 
 /* Contact Section */
