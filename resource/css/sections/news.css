@@ -11,8 +11,9 @@
 .news-link {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 1.25rem;
     width: 100%;
+    padding: 0.75rem 0;
     transition: var(--transition-base);
 }
 
@@ -23,57 +24,61 @@
 #news-list {
     list-style: none;
     padding: 0;
+    margin: 1.5rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 
 .news-item {
-    display: flex;
-    align-items: center;
-    gap: 1em;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5em;
+}
+
+.news-item:last-child {
+    border-bottom: none;
 }
 
 .news-thumbnail {
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .news-info {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
 }
 
 .news-info .news-date {
-    font-size: 0.85em;
+    font-size: 0.8125rem;
     color: var(--text-secondary);
+    letter-spacing: 0.02em;
 }
 
 .news-title {
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1.0625rem;
     color: var(--text-color);
-    margin-top: 0.25em;
+    line-height: 1.5;
 }
 
 /* News Articles */
 .news-article {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 3rem auto;
+    padding: 2rem 2.25rem;
     background-color: var(--bg-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
 }
 
 .news-article h1 {
     color: var(--text-color);
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin-bottom: 0.5rem;
 }
 
 .news-article h2 {
@@ -91,7 +96,7 @@
 }
 
 .news-meta .news-date {
-    color: #888888;
+    color: var(--text-secondary);
     font-size: 0.9em;
     display: inline-block;
     margin: 0;
@@ -105,8 +110,8 @@
 
 .news-body {
     line-height: 1.8;
-    color: #555555;
-    font-size: 1.1em;
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
 }
 
 .news-body h2,
@@ -143,7 +148,7 @@
 }
 
 .news-toc a {
-    color: #007bff;
+    color: var(--primary-color);
     text-decoration: none;
 }
 

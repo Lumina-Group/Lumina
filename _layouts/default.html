@@ -9,7 +9,7 @@
   {% assign page_description = page.description | default: site.description %}
   {% assign page_keywords = page.keywords | default: site.keywords %}
   {% assign og_image = page.og_image | default: site.url | append: site.baseurl | append:
-  "/resource/images/favicon/lumina.png" %}
+  "/resource/images/favicon/lumina-logo.png" %}
   {% assign og_type = page.og_type | default: "website" %}
 
   <title>{{ page_title }} - {{ site.title }}</title>
@@ -18,13 +18,13 @@
 
   <link rel="stylesheet" href="{{ site.baseurl }}/resource/css/main.css">
   <!-- ファビコン -->
-  <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+  <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-icon.png">
+  <link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-icon.png">
+  <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-icon-192.png">
   <link rel="icon" type="image/png" sizes="32x32"
-    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
-  <link rel="icon" type="image/png" sizes="16x16"
-    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png">
+    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-icon-192.png">
 
   <!-- Canonical URL -->
   {% if page.url %}
@@ -86,7 +86,7 @@
       "name": "Lumina",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png"
+        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-logo.png"
       }
     },
     "mainEntityOfPage": {
@@ -101,7 +101,7 @@
     "@type": "Organization",
     "name": "Lumina",
     "url": "{{ site.url }}{{ site.baseurl }}/",
-    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png",
+    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-logo.png",
     "description": "{{ page_description }}",
     "sameAs": [
       "https://x.com/group_lumina",
@@ -116,7 +116,7 @@
     "@type": "Organization",
     "name": "Lumina",
     "url": "{{ site.url }}{{ site.baseurl }}/",
-    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png",
+    "logo": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-logo.png",
     "description": "{{ page_description }}",
     "sameAs": [
       "https://x.com/group_lumina",
@@ -146,7 +146,7 @@
       "name": "Lumina",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina.png"
+        "url": "{{ site.url }}{{ site.baseurl }}/resource/images/favicon/lumina-logo.png"
       }
     }
   }
@@ -184,6 +184,7 @@
         <div class="footer-section">
           <h4>情報</h4>
           <p><a href="{{ site.baseurl }}/pages/about.html" class="footer-link">概要</a></p>
+          <p><a href="{{ site.baseurl }}/pages/commerce.html" class="footer-link">特定商取引法に基づく表記</a></p>
         </div>
         <div class="footer-section">
           <h4>お問い合わせ</h4>
