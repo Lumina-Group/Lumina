@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "portalOrigin": "https://vinci.lumina-group.jp",
+  "features": {
+    "cloudRegistration": false,
+    "contentCheckout": false
+  },
+  "routes": {
+    "cloud": "/sign-in",
+    "content": "/store/content"
+  }
+}

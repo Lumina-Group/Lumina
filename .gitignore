@@ -1,3 +1,5 @@
 _lumina_news_updater/
 output/playwright/
 .playwright-cli/
+__pycache__/
+*.py[cod]
