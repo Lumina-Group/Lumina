@@ -144,6 +144,18 @@
     outline-offset: 4px;
 }
 
+.ls-btn.is-disabled,
+.ls-btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.48;
+}
+
+.ls-btn.is-disabled:hover,
+.ls-btn[aria-disabled="true"]:hover {
+    background: transparent;
+    color: var(--ls-text);
+}
+
 .ls-btn::before {
     content: "[+] ";
     margin-right: 0.5rem;
