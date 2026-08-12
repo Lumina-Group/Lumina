@@ -58,6 +58,7 @@ class StorefrontContractTest(unittest.TestCase):
         self.assertIn("30日ごとのオンライン更新と7日間の猶予", self.index)
         self.assertIn("Freeは1台・1GB、Proは最大3台・20GB", self.index)
         self.assertIn("製品仕様、価格、販売時期などの詳細はまだ公開していません", self.index)
+        self.assertIn('href="https://vinci.lumina-group.jp/"', self.index)
 
     def test_product_cards_contain_only_approved_public_copy(self):
         parser = CardCopyParser()
@@ -65,7 +66,7 @@ class StorefrontContractTest(unittest.TestCase):
         self.assertEqual(
             parser.card_copy,
             [
-                "詳細は準備が整い次第お知らせします。",
+                "Vinciの公式サイトを公開しています。",
                 "公式追加コンテンツは個別購入です。購入権はアカウントに残り、端末利用には30日ごとのオンライン更新と7日間の猶予があります。",
                 "Freeは1台・1GB、Proは最大3台・20GB。Proに無料試用期間はありません。",
             ],
