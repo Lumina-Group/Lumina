@@ -1,260 +1,90 @@
 /**
- * Commerce Disclosure Page
- * 特定商取引法に基づく表記ページのスタイル
+ * Legal pages — 特定商取引法・利用規約
  */
 
 .commerce-section {
-    padding: 4rem 0;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
 }
 
-.commerce-section h3 {
-    font-size: 2rem;
-    font-weight: 700;
+.commerce-section h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.75rem;
     color: var(--text-color);
-    margin-bottom: 3rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.commerce-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    border-radius: 2px;
-}
-
-.commerce-content {
-    display: grid;
-    gap: 2.5rem;
 }
 
 .commerce-intro {
-    text-align: center;
+    margin: 0 0 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.7;
     color: var(--text-secondary);
-    font-size: 1.0625rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--secondary-bg);
-    border-radius: 12px;
-}
-
-.commerce-groups {
-    display: grid;
-    gap: 2rem;
-}
-
-.commerce-group {
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-base);
-}
-
-.commerce-group:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--primary-color);
-}
-
-.commerce-group-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--border-color);
-}
-
-.commerce-group-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--primary-color);
-    color: #fff;
-    font-size: 1.25rem;
-    flex-shrink: 0;
-}
-
-.commerce-group h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin: 0;
 }
 
 .commerce-info-list {
-    list-style: none;
-    padding: 0;
     margin: 0;
-    display: grid;
-    gap: 1.5rem;
+    padding: 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .commerce-info-item {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 1.5rem;
-    padding: 1.25rem;
-    background: var(--secondary-bg);
-    border-radius: 10px;
-    transition: var(--transition-base);
-    border: 1px solid transparent;
-}
-
-.commerce-info-item:hover {
-    background: var(--bg-color);
-    border-color: var(--border-color);
-    box-shadow: var(--shadow-sm);
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.75rem 1rem;
+    margin: 0;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .commerce-info-item dt {
+    margin: 0;
+    font-size: 0.75rem;
     font-weight: 600;
     color: var(--text-color);
-    font-size: 1rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-}
-
-.commerce-info-item dt::before {
-    content: '•';
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    line-height: 1;
-    flex-shrink: 0;
 }
 
 .commerce-info-item dd {
     margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.7;
     color: var(--text-secondary);
-    line-height: 1.8;
-    font-size: 0.9375rem;
 }
 
 .commerce-info-item dd a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition-base);
-    font-weight: 500;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .commerce-info-item dd a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
+    color: var(--text-color);
 }
 
-.commerce-contact {
-    background: var(--primary-color);
-    border-radius: 16px;
-    padding: 3rem 2.5rem;
-    text-align: center;
-    color: #fff;
-    box-shadow: var(--shadow-lg);
-}
-
-.commerce-contact h3 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-}
-
-.commerce-contact h3::after {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.commerce-contact p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.0625rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.commerce-contact .btn {
-    background: #fff;
-    color: var(--primary-color);
-    border: none;
-    font-weight: 600;
-}
-
-.commerce-contact .btn:hover {
-    background: var(--secondary-bg);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .commerce-section {
-        padding: 2.5rem 0;
-    }
-
-    .commerce-section h3 {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .commerce-group {
-        padding: 1.75rem;
-    }
-
-    .commerce-group-header {
-        margin-bottom: 1.5rem;
-    }
-
-    .commerce-group-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
-    }
-
-    .commerce-group h4 {
-        font-size: 1.25rem;
-    }
-
-    .commerce-info-item {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-        padding: 1rem;
-    }
-
-    .commerce-info-item dt {
-        font-size: 0.9375rem;
-    }
-
-    .commerce-info-item dd {
-        font-size: 0.875rem;
-    }
-
-    .commerce-contact {
-        padding: 2rem 1.5rem;
-    }
-
-    .commerce-contact h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Terms of Service (利用規約) */
-.terms-section .terms-body {
-    color: var(--text-secondary);
-    font-size: 0.9375rem;
-    line-height: 1.85;
+.terms-section .legal-block {
     margin: 0;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
+.terms-section .legal-block:first-of-type {
+    border-top: 1px solid var(--border-color);
+}
+
+.terms-section h2 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    color: var(--text-color);
+}
+
+.terms-section .terms-body,
 .terms-section .terms-body p {
-    margin-bottom: 1rem;
+    margin: 0 0 0.6rem;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
 }
 
 .terms-section .terms-body p:last-child {
@@ -263,30 +93,68 @@
 
 .terms-section .terms-list {
     list-style: none;
-    padding-left: 0;
-    margin: 1rem 0 1.25rem;
+    margin: 0 0 0.6rem;
+    padding: 0;
 }
 
 .terms-section .terms-list li {
     position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-secondary);
-    font-size: 0.9375rem;
+    padding-left: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8125rem;
     line-height: 1.7;
+    color: var(--text-secondary);
 }
 
 .terms-section .terms-list li::before {
-    content: '・';
+    content: "・";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
 }
 
 .terms-section .terms-updated {
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    opacity: 0.9;
 }
 
+.legal-footer {
+    margin-top: 2.5rem;
+    padding: 1rem 0 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legal-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.legal-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.legal-footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.legal-footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .commerce-section {
+        padding: 1.5rem 0 2.5rem;
+    }
+
+    .commerce-info-item {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+        padding: 0.65rem 0;
+    }
+}
