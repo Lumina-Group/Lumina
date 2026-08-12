@@ -43,6 +43,25 @@
     padding: 1rem 2rem;
 }
 
+.ls-navbar .navbar-brand,
+.ls-navbar .navbar-brand:visited,
+.ls-navbar .nav-item a,
+.ls-navbar .nav-item a:visited {
+    color: var(--ls-text);
+    text-decoration: none;
+}
+
+.ls-navbar .nav-item a::after {
+    background-color: var(--ls-text);
+}
+
+.ls-navbar .nav-item a:hover,
+.ls-navbar .nav-item a:hover:visited,
+.ls-navbar .nav-item a.active,
+.ls-navbar .nav-item a.active:visited {
+    color: var(--ls-text);
+}
+
 .ls-navbar .nav-label {
     display: none;
 }
@@ -356,20 +375,36 @@
 
 .ls-footer-social .social-links {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1.25rem;
     margin-top: 1rem;
 }
 
-.ls-footer-social a {
-    text-decoration: none;
+.ls-footer-social .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
     color: var(--ls-text);
-    font-size: 0.75rem;
-    font-weight: 700;
+    text-decoration: none;
     transition: var(--ls-transition);
 }
 
-.ls-footer-social a:hover {
+.ls-footer-social .social-links a svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    display: block;
+}
+
+.ls-footer-social .social-links a:hover {
     color: var(--ls-accent);
+    border-color: transparent;
+    box-shadow: none;
 }
 
 .ls-footer-bottom {
