@@ -46,7 +46,8 @@ class StorefrontContractTest(unittest.TestCase):
         self.assertEqual(self.config["portalOrigin"], "https://vinci.lumina-group.jp")
         self.assertTrue(self.config["features"])
         self.assertTrue(all(value is False for value in self.config["features"].values()))
-        self.assertEqual(self.index.count('aria-disabled="true"'), 2)
+        self.assertNotIn("data-store-action", self.index)
+        self.assertNotIn('aria-disabled="true"', self.index)
 
     def test_routes_are_relative_and_cannot_redirect_to_another_origin(self):
         for route in self.config["routes"].values():
@@ -54,11 +55,10 @@ class StorefrontContractTest(unittest.TestCase):
             self.assertFalse(route.startswith("//"))
         self.assertIn("destination.origin !== allowedPortalOrigin", self.script)
 
-    def test_storefront_discloses_offline_renewal_and_closed_checkout(self):
-        self.assertIn("30日ごとのオンライン更新と7日間の猶予", self.index)
-        self.assertIn("Freeは1台・1GB、Proは最大3台・20GB", self.index)
-        self.assertIn("製品仕様、価格、販売時期などの詳細はまだ公開していません", self.index)
+    def test_storefront_points_to_official_site_without_checkout(self):
         self.assertIn('href="https://vinci.lumina-group.jp/"', self.index)
+        self.assertNotIn("販売準備中", self.index)
+        self.assertNotIn("登録準備中", self.index)
 
     def test_product_cards_contain_only_approved_public_copy(self):
         parser = CardCopyParser()
@@ -67,8 +67,6 @@ class StorefrontContractTest(unittest.TestCase):
             parser.card_copy,
             [
                 "Vinciの公式サイトを公開しています。",
-                "公式追加コンテンツは個別購入です。購入権はアカウントに残り、端末利用には30日ごとのオンライン更新と7日間の猶予があります。",
-                "Freeは1台・1GB、Proは最大3台・20GB。Proに無料試用期間はありません。",
             ],
         )
 
