@@ -39,6 +39,7 @@ class StorefrontContractTest(unittest.TestCase):
             (ROOT / "music/storefront-config.json").read_text(encoding="utf-8")
         )
         self.index = (ROOT / "music/index.html").read_text(encoding="utf-8")
+        self.goods = (ROOT / "music/pages/goods.html").read_text(encoding="utf-8")
         self.script = (ROOT / "music/interaction.js").read_text(encoding="utf-8")
 
     def test_public_storefront_is_fail_closed(self):
@@ -67,8 +68,49 @@ class StorefrontContractTest(unittest.TestCase):
             parser.card_copy,
             [
                 "Vinciの公式サイトを公開しています。",
+                "LUMINA SOUNDSの販売予定グッズを紹介しています。",
             ],
         )
+
+    def test_goods_is_reachable_from_the_navigation_and_works(self):
+        self.assertIn('<a href="/music/pages/goods.html">GOODS</a>', self.index)
+        self.assertIn(
+            'href="/music/pages/goods.html" class="ls-btn btn-buy">View Goods</a>',
+            self.index,
+        )
+
+    def test_goods_page_is_a_text_only_pre_release_showcase(self):
+        self.assertIn(
+            '<link rel="canonical" href="https://lumina-group.jp/music/pages/goods.html">',
+            self.goods,
+        )
+        self.assertIn('aria-current="page"', self.goods)
+        self.assertIn('data-goods-product="metal-keyholder"', self.goods)
+        self.assertIn('data-goods-product="towel"', self.goods)
+        self.assertIn("Metal Keyholder", self.goods)
+        self.assertIn("Towel", self.goods)
+        self.assertIn(
+            "LUMINA SOUNDSをかたどった、高級感のある金属製キーホルダー。",
+            self.goods,
+        )
+        self.assertIn(
+            "日々の時間と音楽のそばに置く、LUMINA SOUNDSのタオル。",
+            self.goods,
+        )
+        self.assertIn("¥2,200", self.goods)
+        self.assertIn("¥2,750", self.goods)
+        self.assertIn("販売予定価格は、販売開始時に変更となる場合があります。", self.goods)
+        self.assertGreaterEqual(self.goods.count("販売予定"), 3)
+        self.assertGreaterEqual(self.goods.count("発売時期未定"), 3)
+
+    def test_goods_page_does_not_expose_checkout_or_placeholder_content(self):
+        goods_lower = self.goods.lower()
+        self.assertNotIn("stripe", goods_lower)
+        self.assertNotIn("buy.stripe.com", goods_lower)
+        self.assertNotIn("data-store-action", self.goods)
+        self.assertNotIn('aria-disabled="true"', self.goods)
+        self.assertNotIn("<img", goods_lower)
+        self.assertNotIn("image-placeholder", self.goods)
 
 
 if __name__ == "__main__":

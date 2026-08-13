@@ -298,6 +298,307 @@
     justify-content: center;
 }
 
+/* Goods entry on the Works page */
+.ls-goods-entry-card .ls-card-image {
+    cursor: default;
+}
+
+.ls-goods-entry-card .ls-card-image::after {
+    content: "VIEW GOODS";
+}
+
+.ls-goods-entry-panel {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    background:
+        linear-gradient(90deg, rgba(26, 26, 26, 0.08) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(26, 26, 26, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(15, 118, 110, 0.1), transparent 58%),
+        var(--ls-panel);
+}
+
+.ls-goods-entry-word {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    letter-spacing: 0.12em;
+    line-height: 0.9;
+}
+
+.ls-goods-entry-code {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--ls-text-meta);
+}
+
+/* Goods page */
+.ls-goods-page .ls-navbar .nav-item a[aria-current="page"] {
+    color: var(--ls-text);
+    font-weight: 700;
+}
+
+.ls-goods-main {
+    padding-bottom: 2rem;
+}
+
+.ls-goods-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 8rem 0 6rem;
+    text-align: center;
+}
+
+.ls-goods-hero-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--ls-border);
+}
+
+.ls-goods-title {
+    margin: 3rem 0 2rem;
+    font-size: clamp(4rem, 15vw, 9rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 0.76;
+}
+
+.ls-goods-lede {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--ls-text);
+    font-size: 1.0625rem;
+    line-height: 2.15;
+}
+
+.ls-goods-release {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    color: var(--ls-text-meta);
+    font-size: 0.75rem;
+}
+
+.ls-goods-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.28rem 0.5rem;
+    border: 1px solid rgba(15, 118, 110, 0.55);
+    color: var(--ls-accent);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.ls-goods-release-date {
+    letter-spacing: 0.04em;
+}
+
+.ls-goods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--ls-border);
+    border-bottom: 1px solid var(--ls-border);
+}
+
+.ls-goods-product {
+    min-width: 0;
+    padding: 1.25rem 0 2.5rem;
+}
+
+.ls-goods-product + .ls-goods-product {
+    border-left: 1px solid var(--ls-border);
+    padding-left: 2rem;
+}
+
+.ls-goods-product:first-child {
+    padding-right: 2rem;
+}
+
+.ls-goods-product-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--ls-border);
+}
+
+.ls-goods-object {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15rem;
+    margin: 1.25rem 0 1.5rem;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(26, 26, 26, 0.07) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(26, 26, 26, 0.07) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(15, 118, 110, 0.12), transparent 62%),
+        var(--ls-panel);
+    background-size: 32px 32px, 32px 32px, auto, auto;
+}
+
+.ls-goods-object-label,
+.ls-goods-object-brand {
+    position: absolute;
+    color: var(--ls-text-meta);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.ls-goods-object-label {
+    top: 1rem;
+    left: 1rem;
+}
+
+.ls-goods-object-brand {
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.ls-goods-object-word {
+    max-width: 100%;
+    padding: 0 1rem;
+    color: var(--ls-text);
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    letter-spacing: 0.08em;
+    line-height: 0.9;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.ls-goods-product-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.ls-goods-product-copy {
+    min-height: 3.8em;
+    margin-bottom: 1.5rem;
+    color: var(--ls-text-meta);
+    font-size: 0.8125rem;
+    line-height: 1.9;
+}
+
+.ls-goods-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+}
+
+.ls-goods-facts div {
+    min-width: 0;
+}
+
+.ls-goods-facts dt {
+    margin-bottom: 0.5rem;
+    color: var(--ls-text-meta);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.ls-goods-facts dd {
+    margin: 0;
+    color: var(--ls-text);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.ls-goods-price-fact {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ls-border);
+}
+
+.ls-goods-price-fact dt {
+    margin-bottom: 0;
+}
+
+.ls-goods-price-fact dd {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.ls-goods-tax {
+    color: var(--ls-text-meta);
+    font-size: 0.625rem;
+}
+
+.ls-goods-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.ls-goods-price-note {
+    margin: 1.25rem 0 0;
+    color: var(--ls-text-meta);
+    font-size: 0.75rem;
+    line-height: 1.8;
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+    .ls-goods-hero {
+        padding: 5rem 0 4rem;
+    }
+
+    .ls-goods-hero-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ls-goods-title {
+        margin-top: 2.5rem;
+        font-size: clamp(3.5rem, 19vw, 6rem);
+    }
+
+    .ls-goods-lede {
+        font-size: 1rem;
+    }
+
+    .ls-goods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ls-goods-product,
+    .ls-goods-product:first-child,
+    .ls-goods-product + .ls-goods-product {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .ls-goods-product + .ls-goods-product {
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--ls-border);
+        border-left: 0;
+    }
+
+    .ls-goods-object {
+        min-height: 12rem;
+    }
+
+    .ls-goods-price-note {
+        text-align: left;
+    }
+}
+
 .ls-stripe-checkout {
     margin-top: 8rem;
     padding-top: 4rem;
