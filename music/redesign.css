@@ -55,6 +55,18 @@
     background-color: var(--ls-text);
 }
 
+/* Keep the editorial nav quiet until a person intentionally hovers or focuses it. */
+.ls-navbar .nav-item a.active::after,
+.ls-navbar .nav-item a[aria-current="page"]::after {
+    width: 0;
+}
+
+.ls-navbar .nav-item a.active:hover::after,
+.ls-navbar .nav-item a[aria-current="page"]:hover::after,
+.ls-navbar .nav-item a:focus-visible::after {
+    width: 100%;
+}
+
 .ls-navbar .nav-item a:hover,
 .ls-navbar .nav-item a:hover:visited,
 .ls-navbar .nav-item a.active,

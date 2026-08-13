@@ -67,7 +67,7 @@ function normalizePath(path) {
 }
 
 /**
- * 現在のページに対応するナビゲーションリンクにアクティブクラスを追加
+ * 現在のページまたはハッシュに対応するナビゲーションリンクにアクティブクラスを追加
  */
 export function setActiveNavLink() {
     try {
@@ -77,11 +77,26 @@ export function setActiveNavLink() {
         }
 
         const currentPath = normalizePath(window.location.pathname);
+        const currentHash = window.location.hash;
 
         navLinks.forEach(link => {
             try {
-                const linkPath = normalizePath(new URL(link.getAttribute('href'), window.location.origin).pathname);
-                if (linkPath === currentPath) {
+                link.classList.remove('active');
+
+                const linkUrl = new URL(link.getAttribute('href'), window.location.origin);
+                const linkPath = normalizePath(linkUrl.pathname);
+                if (linkPath !== currentPath) {
+                    return;
+                }
+
+                if (linkUrl.hash) {
+                    if (linkUrl.hash === currentHash) {
+                        link.classList.add('active');
+                    }
+                    return;
+                }
+
+                if (currentHash === '') {
                     link.classList.add('active');
                 }
             } catch (error) {

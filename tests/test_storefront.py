@@ -5,6 +5,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+LUMINA_FOOTER_PAGES = (
+    ROOT / "index.html",
+    ROOT / "_layouts/default.html",
+    ROOT / "pages/about.html",
+    ROOT / "pages/mission.html",
+    ROOT / "pages/news.html",
+    ROOT / "pages/projects.html",
+    ROOT / "pages/services.html",
+)
 
 
 class CardCopyParser(HTMLParser):
@@ -41,6 +50,11 @@ class StorefrontContractTest(unittest.TestCase):
         self.index = (ROOT / "music/index.html").read_text(encoding="utf-8")
         self.goods = (ROOT / "music/pages/goods.html").read_text(encoding="utf-8")
         self.script = (ROOT / "music/interaction.js").read_text(encoding="utf-8")
+        self.navigation = (ROOT / "resource/js/modules/navigation.js").read_text(
+            encoding="utf-8"
+        )
+        self.main_script = (ROOT / "resource/js/main.js").read_text(encoding="utf-8")
+        self.redesign = (ROOT / "music/redesign.css").read_text(encoding="utf-8")
 
     def test_public_storefront_is_fail_closed(self):
         self.assertEqual(self.config["schemaVersion"], 1)
@@ -60,6 +74,34 @@ class StorefrontContractTest(unittest.TestCase):
         self.assertIn('href="https://vinci.lumina-group.jp/"', self.index)
         self.assertNotIn("販売準備中", self.index)
         self.assertNotIn("登録準備中", self.index)
+
+    def test_lumina_sounds_copy_is_not_personal_branding(self):
+        self.assertIn("Luminaが運営する音楽ブランド", self.index)
+        self.assertIn("Lumina Sounds is a music brand operated by Lumina.", self.index)
+        for personal_wording in (
+            "個人事業Lumina",
+            "個人音楽ブランド",
+            "私、「Lumina」",
+            "personal music brand",
+        ):
+            self.assertNotIn(personal_wording, self.index)
+
+    def test_lumina_site_footer_uses_lumina_sounds(self):
+        for footer_page in LUMINA_FOOTER_PAGES:
+            footer = footer_page.read_text(encoding="utf-8")
+            self.assertIn("Lumina Sounds", footer, footer)
+            self.assertNotIn("Lumina Music", footer, footer)
+
+    def test_music_navigation_does_not_keep_multiple_underlines_active(self):
+        self.assertIn("const currentHash = window.location.hash;", self.navigation)
+        self.assertIn("if (linkUrl.hash)", self.navigation)
+        self.assertIn("if (linkUrl.hash === currentHash)", self.navigation)
+        self.assertIn("if (currentHash === '')", self.navigation)
+        self.assertIn(
+            "window.addEventListener('hashchange', setActiveNavLink);", self.main_script
+        )
+        self.assertIn(".ls-navbar .nav-item a.active::after", self.redesign)
+        self.assertIn('.ls-navbar .nav-item a[aria-current="page"]::after', self.redesign)
 
     def test_product_cards_contain_only_approved_public_copy(self):
         parser = CardCopyParser()

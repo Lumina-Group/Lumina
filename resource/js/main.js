@@ -15,6 +15,7 @@ function init() {
     // ナビゲーション機能
     initMobileMenu();
     setActiveNavLink();
+    window.addEventListener('hashchange', setActiveNavLink);
 
     // スクロール機能
     initNavbarScroll();
